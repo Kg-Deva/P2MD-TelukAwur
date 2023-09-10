@@ -27,7 +27,7 @@ Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/postlogin', [LoginController::class, 'postlogin'])->name('postlogin');
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
-Route::group(['middleware' => ['auth']], function () {
+Route::group(['middleware' => ['auth','ceklevel:admin,user']], function () {
     Route::get('/administrator', function () {
         return view('admin.administrator');
     });

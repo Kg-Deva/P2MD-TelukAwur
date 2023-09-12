@@ -1,6 +1,6 @@
         <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
           <div class="app-brand demo">
-            <a href="index.html" class="app-brand-link">
+            <a href="/administrator" class="app-brand-link">
               <span class="app-brand-logo demo">
                 <svg
                   width="25"
@@ -67,60 +67,63 @@
           <div class="menu-inner-shadow"></div>
 
           <ul class="menu-inner py-1">
-            <!-- Logout -->
-            <li class="menu-item">
-              <a href="{{ route('logout') }}" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                <div data-i18n="Analytics">Logout</div>
-              </a>
-            </li>
+          @if (auth()->user()->level == "admin")
+      
+         <li class="menu-item">
+           <a href="/data-user" class="menu-link">
+             <i class="menu-icon tf-icons bi bi-activity"></i>
+             <div data-i18n="Analytics">Data User</div>
+           </a>
+         </li>
+          
+      
+          @endif
 
-            @if (auth()->user()->level == "user")
-            <!-- Dashboard -->
-            <li class="menu-item active">
-              <a href="index.html" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                <div data-i18n="Analytics">Dashboard</div>
+            <!-- user -->
+            <!-- <li class="menu-item">
+              <a href="/data-user" class="menu-link">
+                <i class="menu-icon tf-icons bi bi-front"></i>
+                <div data-i18n="Analytics">Profile</div>
               </a>
-            </li>
-            @endif
-
-            @if (auth()->user()->level == "admin")
-            <!-- Layouts -->
-            <li class="menu-item">
+             </li> -->
+            <li class="menu-item open">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <i class="menu-icon tf-icons bx bx-layout"></i>
-                <div data-i18n="Layouts">Layouts</div>
+                <i class="menu-icon tf-icons bi bi-front"></i>
+                <div data-i18n="Account Settings">Content</div>
               </a>
-
               <ul class="menu-sub">
                 <li class="menu-item">
-                  <a href="layouts-without-menu.html" class="menu-link">
-                    <div data-i18n="Without menu">Without menu</div>
+                  <a href="/profile" class="menu-link">
+                    <div data-i18n="Account">Profile</div>
                   </a>
                 </li>
                 <li class="menu-item">
-                  <a href="layouts-without-navbar.html" class="menu-link">
-                    <div data-i18n="Without navbar">Without navbar</div>
+                  <a href="pages-account-settings-notifications.html" class="menu-link">
+                    <div data-i18n="Notifications">Spot Pantai</div>
                   </a>
                 </li>
                 <li class="menu-item">
-                  <a href="layouts-container.html" class="menu-link">
-                    <div data-i18n="Container">Container</div>
+                  <a href="pages-account-settings-notifications.html" class="menu-link">
+                    <div data-i18n="Notifications">Kuliner</div>
                   </a>
                 </li>
                 <li class="menu-item">
-                  <a href="layouts-fluid.html" class="menu-link">
-                    <div data-i18n="Fluid">Fluid</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="layouts-blank.html" class="menu-link">
-                    <div data-i18n="Blank">Blank</div>
+                  <a href="pages-account-settings-connections.html" class="menu-link">
+                    <div data-i18n="Connections">Paket Wisata</div>
                   </a>
                 </li>
               </ul>
             </li>
-          </ul>
-          @endif
+          
+           
+
+         
+          <!-- Logout -->
+          <li class="menu-item">
+              <a href="{{ route('logout') }}" class="menu-link">
+                <i class="menu-icon tf-icons bi bi-escape"></i>
+                <div data-i18n="Analytics">Logout</div>
+              </a>
+            </li>
+            </ul>
         </aside>

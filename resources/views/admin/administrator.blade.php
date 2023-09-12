@@ -7,8 +7,7 @@
   dir="ltr"
   data-theme="theme-default"
   data-assets-path="../assets/"
-  data-template="vertical-menu-template-free"
->
+  data-template="vertical-menu-template-free">
   <head>
       <title>Administrator</title>
       @include('admin.layouts.head')
@@ -26,7 +25,7 @@
         <div class="layout-page">
 
         <!-- Navbar -->
-
+        @include('admin.layouts.navbar')
         <!-- / Navbar -->
 
           <!-- Content wrapper -->

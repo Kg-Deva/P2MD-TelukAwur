@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LoginController;
 use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\Route;
@@ -19,9 +20,15 @@ Route::get('/', function () {
     return view('admin.login');
 });
 
-// Route::get('/index', function () {
-//     return view('admin.index');
+// Route::get('/data-user', function () {
+//     return view('admin.data-user');
 // });
+// Route::get('/add-user',   function () {
+//     return view('admin.crud.add-user');
+// });
+Route::get('/profile', function () {
+    return view('admin.profile');
+});
 
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/postlogin', [LoginController::class, 'postlogin'])->name('postlogin');
@@ -31,5 +38,13 @@ Route::group(['middleware' => ['auth','ceklevel:admin,user']], function () {
     Route::get('/administrator', function () {
         return view('admin.administrator');
     });
+    Route::get('/add-user', [AdminController::class, 'add'])->name('add-user');
+    Route::post('/simpan-user', [AdminController::class, 'simpan_user'])->name('simpan-user');
+    Route::get('/data-user', [AdminController::class, 'show'])->name('data-user');
+    Route::get('/edit-user/{id}', [AdminController::class, 'edit'])->name('edit-user');
+    Route::post('/update-user/{id}', [AdminController::class, 'update'])->name('update-user');
+    Route::get('/delete-user/{id}', [AdminController::class, 'destroy'])->name('delete-user');
+
+
 });
 

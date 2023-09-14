@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/admin', function () {
     return view('admin.login');
 });
 
@@ -33,14 +33,14 @@ Route::get('/', function () {
 //     return view('admin.crud.add-profile');
 // });
 
-Route::get('/login', [LoginController::class, 'index'])->name('login');
-Route::post('/postlogin', [LoginController::class, 'postlogin'])->name('postlogin');
-Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::group(['middleware' => ['auth','ceklevel:admin,user']], function () {
     Route::get('/administrator', function () {
         return view('admin.administrator');
     });
+    Route::get('/login', [LoginController::class, 'index'])->name('login');
+    Route::post('/postlogin', [LoginController::class, 'postlogin'])->name('postlogin');
+    Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
     Route::get('/add-user', [AdminController::class, 'add'])->name('add-user');
     Route::post('/simpan-user', [AdminController::class, 'simpan_user'])->name('simpan-user');
     Route::get('/data-user', [AdminController::class, 'show'])->name('data-user');

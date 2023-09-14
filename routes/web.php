@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/login', function () {
     return view('admin.login');
 });
 
@@ -53,7 +53,7 @@ Route::group(['middleware' => ['auth','ceklevel:admin,user']], function () {
 | ROUTE FRONTDEND
 |--------------------------------------------------------------------------
 */
-Route::get('/home', function () {
+Route::get('/', function () {
     return view('home');
 });
 

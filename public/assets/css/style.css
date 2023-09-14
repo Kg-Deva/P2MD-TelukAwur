@@ -6,7 +6,7 @@
 body {
   color: #666666;
   font-size: 14px;
-  font-family: poppins;
+  font-family: "Poppins", sans-serif;
   line-height: 1.80857;
   font-weight: normal;
   overflow-x: hidden;
@@ -86,7 +86,7 @@ h6 {
 }
 
 #topbar .contact-info i {
-  font-style: nunito;
+  font-style: italic;
   font-size: 14px;
   color: #4D89A0;
 }
@@ -104,7 +104,7 @@ h6 {
 }
 
 #topbar .contact-info i a:hover {
-  color: black;
+  color: #222222;
   text-decoration: underline;
 }
 
@@ -116,7 +116,7 @@ h6 {
 }
 
 #topbar .social-links a:hover {
-  color: black;
+  color: #222222;
 }
 /* @media (max-width: 1366px) {
   .topbar .contact-info i a {
@@ -175,9 +175,6 @@ h6 {
   margin-top: 70px;
 }
 
-/*--------------------------------------------------------------
-# Navigation Warung
---------------------------------------------------------------*/
 /**
 * Desktop Navigation 
 */
@@ -230,7 +227,7 @@ h6 {
   height: 2px;
   bottom: -6px;
   left: 0;
-  background-color: black;
+  background-color: #222222;
   visibility: hidden;
   width: 0px;
   transition: all 0.3s ease-in-out 0s;
@@ -247,7 +244,7 @@ h6 {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover>a {
-  color: black;
+  color: #222222;
 }
 
 .navbar .dropdown ul {
@@ -447,7 +444,6 @@ h6 {
 
 #hero:before {
   content: "";
-  /* background: rgba(255, 255, 255, 0.6); */
   position: absolute;
   bottom: 0;
   top: 0;
@@ -576,7 +572,7 @@ section {
 .titlepage h2{
     padding: 8px 1px;
     letter-spacing: 1px;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
     color: #106eea;
     line-height: 50px;
@@ -605,7 +601,7 @@ color: #141012;
   height: 5px;
   border-top: 2px solid #106eea;
   top: 31px;
-  width: 50px;
+  width: 20px;
 }
 
 /* @media (min-width: 1024px) {
@@ -676,20 +672,7 @@ color: #141012;
   top: -40px;
   right: -50px;
 }
-/* .about a {
-  width: 200px;
-  font-size: 17px;
-  padding: 20px 0px;
-  background-color: #ee580f;
-  color: #fff;
-  display: inline-block;
-  line-height: 20px;
-  border-radius: 30px;
-  text-align: center;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-} */
+
 .about a:hover {
   background: #15cfe5;
   ;
@@ -700,13 +683,21 @@ color: #141012;
     display: none;
   }
   .about .about-box p span{
-    display: flex;
-    padding-left: 1px;
-    padding-right: 1px;
+    display: inline-block;
+    padding-right: 0px;
     justify-content: center;
     align-items: center;
     align-content: center;
     margin: 0 auto;
+  }
+
+  .about .about-box p {
+    display: inline-block;
+    position: relative;
+    display: inline-block;
+    padding-left: 25px;
+    padding-right: 25px;
+
   }
 
 }
@@ -781,7 +772,7 @@ color: #141012;
 
 .team .member .member-info span {
   display: block;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 400;
   color: #aaaaaa;
 }
@@ -813,7 +804,7 @@ text-align: center;
 }
 .package-item {
   box-shadow: 0 0 45px rgba(0, 0, 0, .08);
-  background: white;
+  background: #fff;
 }
 
 .package-item img {
@@ -902,7 +893,7 @@ text-align: center;
 # Contact
 --------------------------------------------------------------*/
 .contact {
-  background: white;
+  background: #fff;
 }
 .contact .info-box {
   color: #444444;
@@ -920,7 +911,7 @@ text-align: center;
 }
 
 .contact .info-box h3 {
-  font-size: 20px;
+  font-size: 18px;
   color: #777777;
   font-weight: 700;
   margin: 10px 0;
@@ -1035,57 +1026,6 @@ text-align: center;
   color: #444444;
   font-size: 14px;
   background: #f1f6fe;
-}
-
-#footer .footer-newsletter {
-  padding: 50px 0;
-  background: #f1f6fe;
-  text-align: center;
-  font-size: 15px;
-}
-
-#footer .footer-newsletter h4 {
-  font-size: 24px;
-  margin: 0 0 20px 0;
-  padding: 0;
-  line-height: 1;
-  font-weight: 600;
-}
-
-#footer .footer-newsletter form {
-  margin-top: 30px;
-  background: #fff;
-  padding: 6px 10px;
-  position: relative;
-  border-radius: 4px;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.06);
-  text-align: left;
-}
-
-#footer .footer-newsletter form input[type=email] {
-  border: 0;
-  padding: 4px 8px;
-  width: calc(100% - 100px);
-}
-
-#footer .footer-newsletter form input[type=submit] {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  border: 0;
-  background: none;
-  font-size: 16px;
-  padding: 0 20px;
-  background: #106eea;
-  color: #fff;
-  transition: 0.3s;
-  border-radius: 0 4px 4px 0;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-}
-
-#footer .footer-newsletter form input[type=submit]:hover {
-  background: #0d58ba;
 }
 
 #footer .footer-top {
@@ -1205,4 +1145,27 @@ text-align: center;
     text-align: center;
     padding: 2px 0;
   }
+}
+
+.menu {
+  padding-bottom: 30px;
+  font-family: "Roboto", sans-serif;
+}
+.menu h4 {
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 18px;
+  color: #222222;
+}
+.menu .ingredients p {
+  font-style: italic;
+  font-size: 14px;
+  line-height: 26px;
+  color: #777777;
+}
+.menu .price p {
+  font-style: italic;
+  font-size: 14px;
+  line-height: 26px;
+  color: #777777;
 }

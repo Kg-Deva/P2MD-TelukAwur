@@ -57,17 +57,23 @@
                           <td>{{$d['deskripsi'] }}</td>
                           <td><img src="{{ asset('storage/'.$d->gambar) }}" alt="" style="width: 100px; height: 50px; "></td>
                           <td>
-                            <div class="dropdown">
+                          <div>
+                          <a class="dropdown-item" href="{{ url('edit-profile', $d->id) }}"><i class="bx bx-edit-alt me-1"></i>
+                                Edit</a>
+                              <a class="dropdown-item" href="{{ url('delete-profile',$d->id) }}" ><i class="bx bx-trash me-1"></i>
+                                Delete</a>
+                          </div>
+                            <!-- <div class="dropdown">
                               <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
                                 <i class="bx bx-dots-vertical-rounded"></i>
                               </button>
                               <div class="dropdown-menu">
-                                <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i>
+                                <a class="dropdown-item" href="{{ url('edit-profile', $d->id) }"><i class="bx bx-edit-alt me-1"></i>
                                   Edit</a>
-                                <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i>
+                                <a class="dropdown-item" href=""><i class="bx bx-trash me-1"></i>
                                   Delete</a>
                               </div>
-                            </div>
+                            </div> -->
                           </td>
                         </tr>
                         @endforeach

@@ -60,7 +60,13 @@
                         <td>{{$d['level'] }}</td>
                         <td>{{$d['email'] }}</td>
                         <td>
-                          <div class="dropdown">
+                        <div>
+                        <a class="dropdown-item" href="{{ url('edit-user',$d->id) }}"><i class="bx bx-edit-alt me-1"></i>
+                                Edit</a>
+                              <a class="dropdown-item" href="{{ url('delete-user',$d->id) }}" ><i class="bx bx-trash me-1"></i>
+                                Delete</a>
+                        </div>
+                          <!-- <div class="dropdown">
                             <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
                               <i class="bx bx-dots-vertical-rounded"></i>
                             </button>
@@ -70,7 +76,7 @@
                               <a class="dropdown-item" href="{{ url('delete-user',$d->id) }}" ><i class="bx bx-trash me-1"></i>
                                 Delete</a>
                             </div>
-                          </div>
+                          </div> -->
                         </td>
                       </tr>
                       @endforeach

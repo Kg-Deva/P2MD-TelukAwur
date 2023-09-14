@@ -50,6 +50,9 @@ Route::group(['middleware' => ['auth','ceklevel:admin,user']], function () {
     Route::get('/profile', [AdminController::class, 'profile'])->name('profile');
     Route::get('/add-profile', [UploadgambarController::class, 'add'])->name('add-profile');
     Route::post('/simpan-profile', [UploadgambarController::class, 'simpan_profile'])->name('simpan-profile');
+    Route::get('/edit-profile/{id}', [UploadgambarController::class, 'edit_profile'])->name('edit-profile');
+    Route::post('/update-profile/{id}', [UploadgambarController::class, 'update_profile'])->name('update-profile');
+    Route::get('/delete-profile/{id}', [UploadgambarController::class, 'destroy'])->name('delete-profile');
 
 
 });

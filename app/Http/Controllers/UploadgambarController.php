@@ -34,8 +34,38 @@ class UploadgambarController extends Controller
         
     }
 
-    Uploadgambar::create($validateData);
-    return redirect('profile');
+        Uploadgambar::create($validateData);
+        return redirect('profile');
+    }
+
+    public function edit_profile($id)
+    {
+        $data = Uploadgambar::findorfail($id);
+        return view ('admin.crud.edit-profile',compact('data'));
+        // return view('admin.edit', ['No' => $data]);
+    }
+
+    public function update_profile(Request $request, $id)
+    {
+        $data = Uploadgambar::find($id);
+        $validateData = $request->validate([
+            'deskripsi' => 'required',
+            'gambar' => 'image|file|max:1024'
+        ]);
+
+        if($request->file('gambar')) {
+            $validateData['gambar']= $request->file('gambar')->store('post-gambar');
+        }
+        $data->update($validateData);
+        return redirect('profile')->with('success', 'Data Berhasil Diupdate');
+    
+    }
+    public function destroy($id)
+    {
+        $data = Uploadgambar::findorfail($id);
+        $data->delete();
+        return back()->with('info', 'Data Berhasil Dihapus');
+        // return redirect('data-user')->with('success', 'Data Berhasil Diupdate');
     }
 
     /**
@@ -73,8 +103,5 @@ class UploadgambarController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
-    {
-        //
-    }
+   
 }

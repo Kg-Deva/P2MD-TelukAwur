@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\UploadgambarController;
 use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\Route;
 
@@ -26,9 +27,11 @@ Route::get('/', function () {
 // Route::get('/add-user',   function () {
 //     return view('admin.crud.add-user');
 // });
-Route::get('/profile', function () {
-    return view('admin.profile');
-});
+
+
+// Route::get('/add-profile', function () {
+//     return view('admin.crud.add-profile');
+// });
 
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/postlogin', [LoginController::class, 'postlogin'])->name('postlogin');
@@ -44,6 +47,9 @@ Route::group(['middleware' => ['auth','ceklevel:admin,user']], function () {
     Route::get('/edit-user/{id}', [AdminController::class, 'edit'])->name('edit-user');
     Route::post('/update-user/{id}', [AdminController::class, 'update'])->name('update-user');
     Route::get('/delete-user/{id}', [AdminController::class, 'destroy'])->name('delete-user');
+    Route::get('/profile', [AdminController::class, 'profile'])->name('profile');
+    Route::get('/add-profile', [UploadgambarController::class, 'add'])->name('add-profile');
+    Route::post('/simpan-profile', [UploadgambarController::class, 'simpan_profile'])->name('simpan-profile');
 
 
 });

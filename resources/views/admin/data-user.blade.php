@@ -67,7 +67,7 @@
                             <div class="dropdown-menu">
                               <a class="dropdown-item" href="{{ url('edit-user',$d->id) }}"><i class="bx bx-edit-alt me-1"></i>
                                 Edit</a>
-                              <a class="dropdown-item" href="{{ url('delete-user',$d->id) }}"><i class="bx bx-trash me-1"></i>
+                              <a class="dropdown-item" href="{{ url('delete-user',$d->id) }}" ><i class="bx bx-trash me-1"></i>
                                 Delete</a>
                             </div>
                           </div>

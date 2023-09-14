@@ -86,7 +86,7 @@
                 <div data-i18n="Analytics">Profile</div>
               </a>
              </li> -->
-            <li class="menu-item open">
+            <li class="menu-item">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bi bi-front"></i>
                 <div data-i18n="Account Settings">Content</div>

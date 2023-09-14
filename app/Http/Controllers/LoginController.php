@@ -16,9 +16,9 @@ class LoginController extends Controller
 
     public function postlogin(Request $request) {
         if(Auth::attempt($request->only('email','password'))) {
-            return redirect('/administrator');
+            return redirect('/administrator')->with('success', 'Login Berhasil');
         }
-        return redirect('/');
+        return redirect('/')->with('error', 'Login Gagal');
     }
 
     public function logout() {

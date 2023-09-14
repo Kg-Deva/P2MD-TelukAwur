@@ -57,3 +57,13 @@ Route::group(['middleware' => ['auth','ceklevel:admin,user']], function () {
 
 });
 
+/*
+|--------------------------------------------------------------------------
+| ROUTE FRONTDEND
+|--------------------------------------------------------------------------
+*/
+Route::get('/home', function () {
+    return view('home');
+});
+
+

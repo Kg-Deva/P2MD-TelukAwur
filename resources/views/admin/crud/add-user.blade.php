@@ -29,6 +29,7 @@
           <div class="container-xxl flex-grow-1 container-p-y">
               <!-- Form controls -->
               <div class="d-flex justify-content-center" >
+                
               <div class="col-md-6">
                   <div class="card mb-4">
                     <h5 class="card-header">Form Controls</h5>

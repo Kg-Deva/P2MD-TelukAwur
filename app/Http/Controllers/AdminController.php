@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Uploadgambar;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
@@ -15,13 +16,17 @@ class AdminController extends Controller
 
     public function simpan_user(Request $request) {
     //  dd($request->all());
-    User::create([
+    $validator=User::create([
         'name' => $request->name,
         'level' => 'user',
         'email' => $request->email,
         'password' => bcrypt($request->password),
+        
     ]);
+
+   
         return redirect('data-user')->with('success', 'Data Berhasil Ditambahkan');
+    
     }
 
     public function show()
@@ -50,7 +55,14 @@ class AdminController extends Controller
         $data->delete();
         return back()->with('info', 'Data Berhasil Dihapus');
         // return redirect('data-user')->with('success', 'Data Berhasil Diupdate');
-
     }
-   
+
+    public function profile()
+    {
+        $data=Uploadgambar::all();
+        return view ('admin.profile', compact('data'));
+
+        // $data = Uploadgambar::latest()->get();
+        // return view ('admin.profile', compact('data'));
+    }
 }

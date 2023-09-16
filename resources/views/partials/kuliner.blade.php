@@ -10,10 +10,10 @@
             <div class="row gy-5">
 
               <div class="col-lg-4 menu">
-                <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
-                <h4>Magnam Tiste</h4>
+                <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt="" style="width:100%;height:250px"></a>
+                <h4>Nasi Pecel</h4>
                 <p class="ingredients">
-                  Lorem, deren, trataro, filede, nerada
+                  <i class="fa fa-map-marker-alt text-primary me-2"></i>Pantai Teluk Awur
                 </p>
                 <p class="price">
                   $5.95
@@ -21,57 +21,57 @@
               </div><!-- Menu Item -->
 
               <div class="col-lg-4 menu">
-                <a href="assets/img/menu/menu-item-2.png" class="glightbox"><img src="assets/img/menu/menu-item-2.png" class="menu-img img-fluid" alt=""></a>
-                <h4>Aut Luia</h4>
+                <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt="" style="width:100%;height:250px"></a>
+                <h4>Nasi Pecel</h4>
                 <p class="ingredients">
-                  Lorem, deren, trataro, filede, nerada
+                  <i class="fa fa-map-marker-alt text-primary me-2"></i>Pantai Teluk Awur
                 </p>
                 <p class="price">
-                  $14.95
+                  $5.95
                 </p>
               </div><!-- Menu Item -->
 
               <div class="col-lg-4 menu">
-                <a href="assets/img/menu/menu-item-3.png" class="glightbox"><img src="assets/img/menu/menu-item-3.png" class="menu-img img-fluid" alt=""></a>
-                <h4>Est Eligendi</h4>
+                <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt="" style="width:100%;height:250px"></a>
+                <h4>Nasi Pecel</h4>
                 <p class="ingredients">
-                  Lorem, deren, trataro, filede, nerada
+                  <i class="fa fa-map-marker-alt text-primary me-2"></i>Pantai Teluk Awur
                 </p>
                 <p class="price">
-                  $8.95
+                  $5.95
                 </p>
               </div><!-- Menu Item -->
 
               <div class="col-lg-4 menu">
-                <a href="assets/img/menu/menu-item-4.png" class="glightbox"><img src="assets/img/menu/menu-item-4.png" class="menu-img img-fluid" alt=""></a>
-                <h4>Eos Luibusdam</h4>
+                <a href="assets/img/menu/menu-item-2.png" class="glightbox"><img src="assets/img/menu/menu-item-2.png" class="menu-img img-fluid" alt="" style="width:100%;height:300px"></a>
+                <h4>Ikan Bakar</h4>
                 <p class="ingredients">
-                  Lorem, deren, trataro, filede, nerada
+                  <i class="fa fa-map-marker-alt text-primary me-2"></i>Pantai Teluk Awur
                 </p>
                 <p class="price">
-                  $12.95
+                  $5.95
                 </p>
               </div><!-- Menu Item -->
 
               <div class="col-lg-4 menu">
-                <a href="assets/img/menu/menu-item-5.png" class="glightbox"><img src="assets/img/menu/menu-item-5.png" class="menu-img img-fluid" alt=""></a>
-                <h4>Eos Luibusdam</h4>
+                <a href="assets/img/menu/menu-item-2.png" class="glightbox"><img src="assets/img/menu/menu-item-2.png" class="menu-img img-fluid" alt="" style="width:100%;height:300px"></a>
+                <h4>Ikan Bakar</h4>
                 <p class="ingredients">
-                  Lorem, deren, trataro, filede, nerada
+                  <i class="fa fa-map-marker-alt text-primary me-2"></i>Pantai Teluk Awur
                 </p>
                 <p class="price">
-                  $12.95
+                  $5.95
                 </p>
               </div><!-- Menu Item -->
 
               <div class="col-lg-4 menu">
-                <a href="assets/img/menu/menu-item-6.png" class="glightbox"><img src="assets/img/menu/menu-item-6.png" class="menu-img img-fluid" alt=""></a>
-                <h4>Laboriosam Direva</h4>
+                <a href="assets/img/menu/menu-item-2.png" class="glightbox"><img src="assets/img/menu/menu-item-2.png" class="menu-img img-fluid" alt="" style="width:100%;height:300px"></a>
+                <h4>Ikan Bakar</h4>
                 <p class="ingredients">
-                  Lorem, deren, trataro, filede, nerada
+                   <i class="fa fa-map-marker-alt text-primary me-2"></i>Pantai Teluk Awur
                 </p>
                 <p class="price">
-                  $9.95
+                  $5.95
                 </p>
               </div><!-- Menu Item -->
 

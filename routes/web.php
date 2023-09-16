@@ -17,11 +17,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-<<<<<<< HEAD
-Route::get('/login', function () {
-=======
 Route::get('/admin', function () {
->>>>>>> cc2db5def7ea19f706c0e59facb12c3781f9f5c2
     return view('admin.login');
 });
 

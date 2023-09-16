@@ -706,7 +706,7 @@ color: #141012;
 # SPOT PANTAI
 --------------------------------------------------------------*/
 .team {
-  background-color: #e2f5f8;
+  background-color: #f1f6fe;
   padding: 0 0 30px 0;
 }
 
@@ -800,7 +800,7 @@ text-align: center;
 # penginapan
 --------------------------------------------------------------*/
 .penginapan {
-  background: #e2f5f8;
+  background: #fff;
 }
 .package-item {
   box-shadow: 0 0 45px rgba(0, 0, 0, .08);
@@ -809,6 +809,8 @@ text-align: center;
 
 .package-item img {
   transition: .5s;
+  width: 100%;
+  height: 250px;
 }
 
 .package-item:hover img {
@@ -816,86 +818,46 @@ text-align: center;
 }
 
 
-/*** Booking ***/
-.booking {
-  background: linear-gradient(rgba(15, 23, 43, .7), rgba(15, 23, 43, .7)), url(../img/booking.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 /*--------------------------------------------------------------
-# Frequently Asked Questions
+# paket wisata
 --------------------------------------------------------------*/
-.faq {
-  padding: 60px 0;
+.wisata {
+  background: #f1f6fe;
+}
+.wisata-item .sub p {
+  font-style: italic;
+  font-size: 14px;
+  line-height: 26px;
+  color: #777777;
+}
+.wisata-item {
+  box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+  background: #fff;
 }
 
-.faq .faq-list {
-  padding: 0;
-  list-style: none;
+.wisata-item .sub h2 {
+ font-size: 14;
 }
 
-.faq .faq-list li {
-  border-bottom: 1px solid #d4e5fc;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
+.wisata-item img {
+  transition: .5s;
+  width: 100%;
+  height: 250px;
 }
 
-.faq .faq-list .question {
-  display: block;
-  position: relative;
-  font-family: #106eea;
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: 400;
-  padding-left: 25px;
-  cursor: pointer;
-  color: #0d58ba;
-  transition: 0.3s;
+.wisata-item:hover img {
+  transform: scale(1.1);
 }
 
-.faq .faq-list i {
-  font-size: 16px;
-  position: absolute;
-  left: 0;
-  top: -2px;
-}
-
-.faq .faq-list p {
-  margin-bottom: 0;
-  padding: 10px 0 0 25px;
-}
-
-.faq .faq-list .icon-show {
-  display: none;
-}
-
-.faq .faq-list .collapsed {
-  color: black;
-}
-
-.faq .faq-list .collapsed:hover {
-  color: #106eea;
-}
-
-.faq .faq-list .collapsed .icon-show {
-  display: inline-block;
-  transition: 0.6s;
-}
-
-.faq .faq-list .collapsed .icon-close {
-  display: none;
-  transition: 0.6s;
-}
 
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
 .contact {
-  background: #fff;
+  background: #f1f6fe;
 }
 .contact .info-box {
+  background: #fff;
   color: #444444;
   text-align: center;
   box-shadow: 0 0 30px rgba(40, 41, 41, 0.3);
@@ -1021,7 +983,7 @@ text-align: center;
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: #fff;
+  background: #e2f5f8;
   padding: 0 0 30px 0;
   color: #444444;
   font-size: 14px;
@@ -1030,7 +992,7 @@ text-align: center;
 
 #footer .footer-top {
   padding: 60px 0 30px 0;
-  background: #e2f5f8;
+  background: #fff;
 }
 
 #footer .footer-top .footer-contact {
@@ -1154,6 +1116,7 @@ text-align: center;
 .menu h4 {
   font-weight: 700;
   margin-bottom: 5px;
+  padding-top: 40px;
   font-size: 18px;
   color: #222222;
 }

@@ -88,6 +88,7 @@
     @include('partials.profil');
     @include('partials.spot');
     @include('partials.kuliner');
+    @include('partials.wisata');
     @include('partials.penginapan');
     @include('partials.kontak');
   </main><!-- End #main -->

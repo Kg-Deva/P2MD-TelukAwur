@@ -60,7 +60,7 @@
                           <div>
                           <a class="dropdown-item" href="{{ url('edit-profile', $d->id) }}"><i class="bx bx-edit-alt me-1"></i>
                                 Edit</a>
-                              <a class="dropdown-item" href="{{ url('delete-profile',$d->id) }}" ><i class="bx bx-trash me-1"></i>
+                              <a class="dropdown-item" href="{{ url('delete-profile', $d->id) }}" onclick="confirmation(event)"><i class="bx bx-trash me-1"></i>
                                 Delete</a>
                           </div>
                             <!-- <div class="dropdown">
@@ -91,7 +91,33 @@
             <!-- Footer -->
             @include('admin.layouts.footer')
             <!-- / Footer -->
+            <script>
+      function confirmation(ev) {
+        ev.preventDefault();
+        var urlToRedirect = ev.currentTarget.getAttribute('href');  
+        console.log(urlToRedirect); 
+        swal({
+            title: "Are you sure to Delete this post",
+            text: "You will not be able to revert this!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+        .then((willCancel) => {
+            if (willCancel) {
 
+
+                 
+                window.location.href = urlToRedirect;
+               
+            }  
+
+
+        });
+
+        
+    }
+</script>
   </body>
 
   </html>

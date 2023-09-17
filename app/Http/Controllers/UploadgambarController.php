@@ -35,7 +35,7 @@ class UploadgambarController extends Controller
     }
 
         Uploadgambar::create($validateData);
-        return redirect('profile');
+        return redirect('profile')->with('success', 'Data Berhasil Ditambahkan');
     }
 
     public function edit_profile($id)

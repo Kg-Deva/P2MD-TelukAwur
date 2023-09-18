@@ -4,10 +4,7 @@
     data-assets-path="../assets/" data-template="vertical-menu-template-free">
 
 <head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"
-        integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <title>Data User</title>
+    <title>Spot Pantai</title>
 
     @include('admin.layouts.head')
 </head>
@@ -34,8 +31,8 @@
                         <!-- Bordered Table -->
                         <div class="card">
                             <div class="d-flex justify-content-between">
-                                <h5 class="card-header">Data User</h5>
-                                <a class="card-header" href="/add-user"><button type="button"
+                                <h5 class="card-header">Spot Pantai</h5>
+                                <a class="card-header" href="{{ route('add-spot') }}"><button type="button"
                                         class="btn btn-outline-primary">Tambah</button></a>
                             </div>
 
@@ -46,36 +43,32 @@
                                         <thead>
                                             <tr>
                                                 <th>No</th>
-                                                <th>Name</th>
-                                                <th>Level</th>
-                                                <th>Email</th>
+                                                <th>Spot Pantai</th>
+                                                <th>Gambar</th>
                                                 <th>Actions</th>
                                             </tr>
                                         </thead>
                                         @php
                                             $no = 1;
-                                            $edit = 1;
                                         @endphp
                                         @foreach ($data as $d)
                                             <tbody>
                                                 <tr>
                                                     <td>{{ $no++ }}</td>
-                                                    <td>{{ $d['name'] }}</td>
-                                                    <td>{{ $d['level'] }}</td>
-                                                    <td>{{ $d['email'] }}</td>
+                                                    <td>{{ $d['nama_spot'] }}</td>
+                                                    <td><img src="{{ asset('storage/' . $d->gambar) }}" alt=""
+                                                            style="width: 100px; height: 50px; "></td>
                                                     <td>
                                                         <div>
                                                             <a class="dropdown-item"
-                                                                href="{{ url('edit-user', $d->id) }}"><i
+                                                                href="{{ url('edit-spot', $d->id) }}"><i
                                                                     class="bx bx-edit-alt me-1"></i>
                                                                 Edit</a>
-
-                                                            @if (auth()->user()->id != $d['id'])
-                                                                <a class="dropdown-item"
-                                                                    href="{{ url('delete-user', $d->id) }}"><i
-                                                                        class="bx bx-trash me-1"></i>
-                                                                    Delete</a>
-                                                            @endif
+                                                            <a class="dropdown-item"
+                                                                href="{{ url('delete-spot', $d->id) }}"
+                                                                onclick="confirmDelete(event)"><i
+                                                                    class="bx bx-trash me-1"></i>
+                                                                Delete</a>
                                                         </div>
 
                                                     </td>
@@ -84,9 +77,6 @@
 
                                         </tbody>
                                     </table>
-                                    <br>
-                                    {{ $data->links() }}
-
                                 </div>
                             </div>
 
@@ -98,7 +88,7 @@
                     <!-- Footer -->
                     @include('admin.layouts.footer')
                     <!-- / Footer -->
-
+                    @include('admin.function.delete')
 
 </body>
 

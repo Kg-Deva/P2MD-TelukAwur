@@ -18,7 +18,7 @@ class LoginController extends Controller
         if(Auth::attempt($request->only('email','password'))) {
             return redirect('/administrator')->with('success', 'Login Berhasil');
         }
-        return redirect('/')->with('error', 'Login Gagal');
+        return redirect('/login')->with('error', 'Login Gagal');
     }
 
     public function logout() {

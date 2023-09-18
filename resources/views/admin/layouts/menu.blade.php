@@ -58,13 +58,13 @@
             <ul class="menu-inner py-1">
 
 
-                <!-- user -->
-                <!-- <li class="menu-item">
-              <a href="/data-user" class="menu-link">
-                <i class="menu-icon tf-icons bi bi-front"></i>
-                <div data-i18n="Analytics">Profile</div>
-              </a>
-             </li> -->
+
+                <li class="menu-item">
+                    <a href="/beranda" class="menu-link">
+                        <i class="menu-icon tf-icons bi bi-houses"></i>
+                        <div data-i18n="Analytics">Beranda</div>
+                    </a>
+                </li>
 
                 <li class="menu-item">
                     <a href="/profile" class="menu-link">
@@ -74,7 +74,7 @@
                 </li>
 
                 <li class="menu-item">
-                    <a href="" class="menu-link">
+                    <a href="/spot-pantai" class="menu-link">
                         <i class="menu-icon tf-icons bi bi-wind"></i>
                         <div data-i18n="Analytics">Spot Pantai</div>
                     </a>

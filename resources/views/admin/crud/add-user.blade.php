@@ -80,14 +80,14 @@
 
                                     </div>
                                 </div>
-
                             </div>
                         </div>
-                        <!-- / Content -->
+                    </div>
+                    <!-- / Content -->
 
-                        <!-- Footer -->
-                        @include('admin.layouts.footer')
-                        <!-- / Footer -->
+                    <!-- Footer -->
+                    @include('admin.layouts.footer')
+                    <!-- / Footer -->
 
 
 

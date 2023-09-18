@@ -4,7 +4,7 @@
     data-assets-path="../assets/" data-template="vertical-menu-template-free">
 
 <head>
-    <title>Tables - Basic Tables | Sneat - Bootstrap 5 HTML Admin Template - Pro</title>
+    <title>Add|Spot Pantai</title>
 
     @include('admin.layouts.head')
 </head>
@@ -32,15 +32,16 @@
                                 <div class="card mb-4">
                                     <h5 class="card-header">Merged</h5>
                                     <div class="card-body">
-                                        <form class="mb-3" action="{{ url('update-profile', $data->id) }}"
-                                            method="POST" enctype="multipart/form-data">
+                                        <form class="mb-3" action="{{ route('simpan-spot') }}" method="POST"
+                                            enctype="multipart/form-data">
                                             {{ csrf_field() }}
 
                                             <div class="card-body demo-vertical-spacing demo-only-element">
+
                                                 <div>
-                                                    <label for="basicInput">Deskripsi</label>
-                                                    <textarea class="form-control" aria-label="With textarea" placeholder="Deskripsi" name="deskripsi" type="text"
-                                                        value="">{{ $data['deskripsi'] }}</textarea>
+                                                    <label for="basicInput">Spot Pantai</label>
+                                                    <input class="form-control" aria-label="With textarea"
+                                                        placeholder="Spot Pantai" name="nama_spot" type="text">
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="basicInput">Gambar</label>
@@ -51,18 +52,14 @@
                                                             {{ $message }}
                                                         </div>
                                                     @enderror
-
-                                                </div>
-                                                <div class="form-group">
-                                                    <img src="{{ asset('storage/' . $data->gambar) }}" height="10%"
-                                                        width="50%" alt="" srcset="">
-
+                                                    <!-- <label for="image" class="form-label">Picture</label> -->
+                                                    <!-- <input class="form-control" type="file" id="gambar" name="gambar"> -->
                                                 </div>
                                         </form>
-                                        <button class="btn btn-primary d-grid w-100">Update</button>
+                                        <button class="btn btn-primary d-grid w-100">Add</button>
                                         <!-- <button class="btn btn-danger d-grid w-100"><a href="/data-user"></a></button> -->
                                         </form>
-                                        <button class="btn btn-danger d-grid w-100"><a href="/profile"
+                                        <button class="btn btn-danger d-grid w-100"><a href="/spot"
                                                 style="color: white;">Back</a></button>
                                     </div>
                                 </div>

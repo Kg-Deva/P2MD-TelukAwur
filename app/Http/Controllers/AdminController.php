@@ -27,7 +27,7 @@ class AdminController extends Controller
     $validateData = $request->validate([
         'name' => 'required',
         'level' => 'required',
-        'email' => 'required',
+        'email' => 'required|unique:users|email:dns',
         'password' => 'required',
     ]);
    
@@ -38,9 +38,11 @@ class AdminController extends Controller
 
     public function show()
     {
-       $data=User::all();
+       $data=User::paginate(5);
     // return $data;
-    return view('admin.data-user',compact('data'));
+    // return view('admin.data-user',compact('data'));
+    return view('admin.data-user',['data'=>$data]);
+
 
     }
 
@@ -64,12 +66,7 @@ class AdminController extends Controller
         // return redirect('data-user')->with('success', 'Data Berhasil Diupdate');
     }
 
-    public function profile()
-    {
-        $data=Uploadgambar::all();
-        return view ('admin.profile', compact('data'));
-
-    }
+   
 
     public function administrator()
     {
@@ -78,4 +75,6 @@ class AdminController extends Controller
     return view('admin.administrator',compact('data'));
 
     }
+
+    
 }

@@ -100,8 +100,8 @@
       <div class="container">
         <div class="row">
 
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>BizLand<span>.</span></h3>
+          <div class="col-lg-4 col-md-6 footer-contact">
+            <h3><span>Pantai Teluk Awur</span></h3>
             <p>
               A108 Adam Street <br>
               New York, NY 535022<br>
@@ -111,7 +111,7 @@
             </p>
           </div>
 
-          <div class="col-lg-3 col-md-6 footer-links">
+          <div class="col-lg-4 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
@@ -122,7 +122,7 @@
             </ul>
           </div>
 
-          <div class="col-lg-3 col-md-6 footer-links">
+          <!-- <div class="col-lg-3 col-md-6 footer-links">
             <h4>Our Services</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
@@ -131,9 +131,9 @@
               <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
             </ul>
-          </div>
+          </div> -->
 
-          <div class="col-lg-3 col-md-6 footer-links">
+          <div class="col-lg-4 col-md-6 footer-links">
             <h4>Our Social Networks</h4>
             <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
             <div class="social-links mt-3">
@@ -151,7 +151,7 @@
 
     <div class="container py-4">
       <div class="copyright">
-        &copy; Copyright <strong><span>BizLand</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>Polibang Creative Studio</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->

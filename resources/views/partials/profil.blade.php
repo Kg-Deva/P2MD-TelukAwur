@@ -6,7 +6,6 @@
                 <div class="col-md-12 ">
                   <div class="titlepage">
                       <h2>Profil</h2>
-                      <p> Pantai Teluk Awur adalah pantai yang terletak di Desa Telukawur, Tahunan 4 km dari pusat kota Jepara.[1] Pantai ini ditandai oleh banyaknya pohon mangrove yang berfungsi sebagai peneduh selain sebagai penahan abrasi.[2]</p>
                   </div>
                 </div>
             </div>

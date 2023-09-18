@@ -4,7 +4,6 @@
 
         <div class="titlepage">
           <h2>Spot Pantai</h2>
-          <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
         </div>
 
         <div class="row">
@@ -22,7 +21,7 @@
               </div>
               <div class="member-info">
                 <h4>Pantai Teluk Awur</h4>
-                <span>Chief Executive Officer</span>
+                <!-- <span>Chief Executive Officer</span> -->
               </div>
             </div>
           </div>
@@ -40,7 +39,7 @@
               </div>
               <div class="member-info">
                 <h4>Pantai Teluk Awur</h4>
-                <span>Product Manager</span>
+                <!-- <span>Product Manager</span> -->
               </div>
             </div>
           </div>
@@ -58,7 +57,7 @@
               </div>
               <div class="member-info">
                 <h4>Pantai Teluk Awur</h4>
-                <span>CTO</span>
+                <!-- <span>CTO</span> -->
               </div>
             </div>
           </div>
@@ -76,7 +75,7 @@
               </div>
               <div class="member-info">
                 <h4>Pantai Teluk Awur</h4>
-                <span>Chief Executive Officer</span>
+                <!-- <span>Chief Executive Officer</span> -->
               </div>
             </div>
           </div>
@@ -94,7 +93,7 @@
               </div>
               <div class="member-info">
                 <h4>Pantai Teluk Awur</h4>
-                <span>Product Manager</span>
+                <!-- <span>Product Manager</span> -->
               </div>
             </div>
           </div>
@@ -112,7 +111,7 @@
               </div>
               <div class="member-info">
                 <h4>Pantai Teluk Awur</h4>
-                <span>CTO</span>
+                <!-- <span>CTO</span> -->
               </div>
             </div>
           </div>
@@ -130,7 +129,7 @@
               </div>
               <div class="member-info">
                 <h4>Pantai Teluk Awur</h4>
-                <span>Chief Executive Officer</span>
+                <!-- <span>Chief Executive Officer</span> -->
               </div>
             </div>
           </div>
@@ -148,7 +147,7 @@
               </div>
               <div class="member-info">
                 <h4>Pantai Teluk Awur</h4>
-                <span>Product Manager</span>
+                <!-- <span>Product Manager</span> -->
               </div>
             </div>
           </div>
@@ -166,7 +165,7 @@
               </div>
               <div class="member-info">
                 <h4>Pantai Teluk Awur</h4>
-                <span>CTO</span>
+                <!-- <span>CTO</span> -->
               </div>
             </div>
           </div>

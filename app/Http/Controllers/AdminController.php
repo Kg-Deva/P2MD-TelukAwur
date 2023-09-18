@@ -16,15 +16,22 @@ class AdminController extends Controller
 
     public function simpan_user(Request $request) {
     //  dd($request->all());
-    $validator=User::create([
-        'name' => $request->name,
-        'level' => 'user',
-        'email' => $request->email,
-        'password' => bcrypt($request->password),
+    // $validator=User::create([
+    //     'name' => $request->name,
+    //     'level' => 'user',
+    //     'email' => $request->email,
+    //     'password' => bcrypt($request->password),
         
-    ]);
+    // ]);
 
+    $validateData = $request->validate([
+        'name' => 'required',
+        'level' => 'required',
+        'email' => 'required',
+        'password' => 'required',
+    ]);
    
+        User::create($validateData);
         return redirect('data-user')->with('success', 'Data Berhasil Ditambahkan');
     
     }
@@ -62,7 +69,13 @@ class AdminController extends Controller
         $data=Uploadgambar::all();
         return view ('admin.profile', compact('data'));
 
-        // $data = Uploadgambar::latest()->get();
-        // return view ('admin.profile', compact('data'));
+    }
+
+    public function administrator()
+    {
+       $data=User::all();
+    // return $data
+    return view('admin.administrator',compact('data'));
+
     }
 }

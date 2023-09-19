@@ -37,13 +37,12 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 
 Route::group(['middleware' => ['auth','ceklevel:admin,user']], function () {
-    Route::get('/administrator', function () {
-        return view('admin.administrator');
+    // Route::get('/administrator', function () {
+    //     return view('admin.administrator');
    
-    });
+    // });
     
-    // Route::get('/administrator', [AdminController::class, 'administrator'])->name('administrator');
-
+    Route::get('/administrator', [AdminController::class, 'administrator'])->name('administrator');
     Route::get('/profile', [MenuController::class, 'profile'])->name('profile');
     Route::get('/add-profile', [MenuController::class, 'add'])->name('add-profile');
     Route::post('/simpan-profile', [MenuController::class, 'simpan_profile'])->name('simpan-profile');
@@ -66,6 +65,22 @@ Route::group(['middleware' => ['auth','ceklevel:admin,user']], function () {
     Route::get('/edit-spot/{id}', [MenuController::class, 'edit_spot'])->name('edit-spot');
     Route::post('/update-spot/{id}', [MenuController::class, 'update_spot'])->name('update-spot');
     Route::get('/delete-spot/{id}', [MenuController::class, 'destroy_spot'])->name('delete-spot');
+    
+    //kuliner
+    Route::get('/kuliner', [MenuController::class, 'kuliner'])->name('kuliner');
+    Route::get('/add-kuliner', [MenuController::class, 'add_kuliner'])->name('add-kuliner');
+    Route::post('/simpan-kuliner', [MenuController::class, 'simpan_kuliner'])->name('simpan-kuliner');
+    Route::get('/edit-kuliner/{id}', [MenuController::class, 'edit_kuliner'])->name('edit-kuliner');
+    Route::post('/update-kuliner/{id}', [MenuController::class, 'update_kuliner'])->name('update-kuliner');
+    Route::get('/delete-kuliner/{id}', [MenuController::class, 'destroy_kuliner'])->name('delete-kuliner');
+
+     //kontak
+     Route::get('/kontak', [MenuController::class, 'kontak'])->name('kontak');
+     Route::get('/add-kontak', [MenuController::class, 'add_kontak'])->name('add-kontak');
+     Route::post('/simpan-kontak', [MenuController::class, 'simpan_kontak'])->name('simpan-kontak');
+     Route::get('/edit-kontak/{id}', [MenuController::class, 'edit_kontak'])->name('edit-kontak');
+     Route::post('/update-kontak/{id}', [MenuController::class, 'update_kontak'])->name('update-kontak');
+     Route::get('/delete-kontak/{id}', [MenuController::class, 'destroy_kontak'])->name('delete-kontak');
     
 });
 

@@ -11,18 +11,10 @@ class AdminController extends Controller
 {
     public function add()
     {
-        return view ('admin.crud.add-user');
+        return view ('admin.crud.data-user.add-user');
     }
 
     public function simpan_user(Request $request) {
-    //  dd($request->all());
-    // $validator=User::create([
-    //     'name' => $request->name,
-    //     'level' => 'user',
-    //     'email' => $request->email,
-    //     'password' => bcrypt($request->password),
-        
-    // ]);
 
     $validateData = $request->validate([
         'name' => 'required',
@@ -49,7 +41,7 @@ class AdminController extends Controller
     public function edit($id)
     {
         $data = User::findorfail($id);
-        return view ('admin.crud.edit-user',compact('data'));
+        return view ('admin.crud.data-user.edit-user',compact('data'));
     }
     public function update(Request $request, $id)
     {
@@ -70,9 +62,9 @@ class AdminController extends Controller
 
     public function administrator()
     {
-       $data=User::all();
+    //    $data=User::all();
     // return $data
-    return view('admin.administrator',compact('data'));
+    return view('admin.administrator');
 
     }
 

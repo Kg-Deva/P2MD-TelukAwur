@@ -81,7 +81,7 @@
                 </li>
 
                 <li class="menu-item">
-                    <a href="" class="menu-link">
+                    <a href="/kuliner" class="menu-link">
                         <i class="menu-icon tf-icons bi bi-egg-fried"></i>
                         <div data-i18n="Analytics">Kuliner</div>
                     </a>
@@ -102,7 +102,7 @@
                 </li>
 
                 <li class="menu-item">
-                    <a href="" class="menu-link">
+                    <a href="/kontak" class="menu-link">
                         <i class="menu-icon tf-icons bi bi-person-rolodex"></i>
                         <div data-i18n="Analytics">Kontak</div>
                     </a>

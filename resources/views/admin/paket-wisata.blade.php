@@ -4,7 +4,7 @@
     data-assets-path="../assets/" data-template="vertical-menu-template-free">
 
 <head>
-    <title>Kontak</title>
+    <title>Paket Wisata</title>
 
     @include('admin.layouts.head')
 </head>
@@ -31,8 +31,8 @@
                         <!-- Bordered Table -->
                         <div class="card">
                             <div class="d-flex justify-content-between">
-                                <h5 class="card-header">Kontak</h5>
-                                <a class="card-header" href="{{ route('add-kontak') }}"><button type="button"
+                                <h5 class="card-header">Paket Wisata</h5>
+                                <a class="card-header" href="{{ route('add-wisata') }}"><button type="button"
                                         class="btn btn-outline-primary">Tambah</button></a>
                             </div>
 
@@ -43,9 +43,12 @@
                                         <thead>
                                             <tr>
                                                 <th>No</th>
-                                                <th>Lokasi</th>
-                                                <th>Email</th>
-                                                <th>Telepon</th>
+                                                <th>Nama Paket Wisata</th>
+                                                <th>Tujuan Wisata</th>
+                                                <th>Durasi</th>
+                                                <th>Harga</th>
+                                                <th>Deskripsi</th>
+                                                <th>Gambar</th>
                                                 <th>Actions</th>
                                             </tr>
                                         </thead>
@@ -56,17 +59,21 @@
                                             <tbody>
                                                 <tr>
                                                     <td>{{ $no++ }}</td>
-                                                    <td>{{ $d['lokasi'] }}</td>
-                                                    <td>{{ $d['email'] }}</td>
-                                                    <td>{{ $d['telepon'] }}</td>
+                                                    <td>{{ $d['nama_paket'] }}</td>
+                                                    <td>{{ $d['tujuan_wisata'] }}</td>
+                                                    <td>{{ $d['durasi'] }}</td>
+                                                    <td>{{ $d->formatRupiah('harga') }}</td>
+                                                    <td>{{ $d['deskripsi'] }}</td>
+                                                    <td><img src="{{ asset('storage/' . $d->gambar) }}" alt=""
+                                                            style="width: 100px; height: 50px; "></td>
                                                     <td>
                                                         <div>
                                                             <a class="dropdown-item"
-                                                                href="{{ url('edit-kontak', $d->id) }}"><i
+                                                                href="{{ url('edit-wisata', $d->id) }}"><i
                                                                     class="bx bx-edit-alt me-1"></i>
                                                                 Edit</a>
                                                             <a class="dropdown-item"
-                                                                href="{{ url('delete-kontak', $d->id) }}"
+                                                                href="{{ url('delete-wisata', $d->id) }}"
                                                                 onclick="confirmation(event)"><i
                                                                     class="bx bx-trash me-1"></i>
                                                                 Delete</a>

@@ -4,7 +4,7 @@
     data-assets-path="../assets/" data-template="vertical-menu-template-free">
 
 <head>
-    <title>kuliners</title>
+    <title>kuliner</title>
 
     @include('admin.layouts.head')
 </head>
@@ -31,7 +31,7 @@
                         <!-- Bordered Table -->
                         <div class="card">
                             <div class="d-flex justify-content-between">
-                                <h5 class="card-header">kuliner</h5>
+                                <h5 class="card-header">Kuliner</h5>
                                 <a class="card-header" href="{{ route('add-kuliner') }}"><button type="button"
                                         class="btn btn-outline-primary">Tambah</button></a>
                             </div>
@@ -72,7 +72,7 @@
                                                                 Edit</a>
                                                             <a class="dropdown-item"
                                                                 href="{{ url('delete-kuliner', $d->id) }}"
-                                                                onclick="confirmDelete(event)"><i
+                                                                onclick="confirmation(event)"><i
                                                                     class="bx bx-trash me-1"></i>
                                                                 Delete</a>
                                                         </div>

@@ -7,6 +7,9 @@ use App\Models\Kontak;
 use App\Models\Profile;
 use App\Models\SpotPantai;
 use App\Models\Kuliner;
+use App\Models\Penginapan;
+use App\Models\Wisata;
+
 use Illuminate\Http\Request;
 
 class MenuController extends Controller
@@ -271,7 +274,7 @@ class MenuController extends Controller
         // return redirect('data-user')->with('success', 'Data Berhasil Diupdate');
     }
 
- /*
+    /*
 |--------------------------------------------------------------------------
 | Kontak
 |--------------------------------------------------------------------------
@@ -301,8 +304,6 @@ class MenuController extends Controller
             'telepon' => 'required|integer',
         ]);
 
-     
-
         Kontak::create($validateData);
         return redirect('kontak')->with('success', 'Data Berhasil Ditambahkan');
     }
@@ -323,7 +324,6 @@ class MenuController extends Controller
             'telepon' => 'required|integer',
         ]);
 
-     
         $data->update($validateData);
         return redirect('kontak')->with('success', 'Data Berhasil Diupdate');
     }
@@ -335,6 +335,146 @@ class MenuController extends Controller
         // return redirect('data-user')->with('success', 'Data Berhasil Diupdate');
     }
 
+    /*
+|--------------------------------------------------------------------------
+| Penginapan
+|--------------------------------------------------------------------------
+*/
 
+    public function penginapan()
+    {
+        $data = Penginapan::all();
+        return view('admin.penginapan', compact('data'));
+    }
 
+    public function add_penginapan()
+    {
+        return view('admin.crud.penginapan.add-penginapan');
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     */
+    public function simpan_penginapan(Request $request)
+    {
+        $validateData = $request->validate([
+            'nama_penginapan' => 'required',
+            'harga' => 'required|integer',
+            'deskripsi' => 'required',
+            'gambar' => 'image|file|max:1024',
+        ]);
+
+        if ($request->file('gambar')) {
+            $validateData['gambar'] = $request->file('gambar')->store('post-gambar');
+        }
+
+        Penginapan::create($validateData);
+        return redirect('penginapan')->with('success', 'Data Berhasil Ditambahkan');
+    }
+
+    public function edit_penginapan($id)
+    {
+        $data = Penginapan::findorfail($id);
+        return view('admin.crud.penginapan.edit-penginapan', compact('data'));
+        // return view('admin.edit', ['No' => $data]);
+    }
+
+    public function update_penginapan(Request $request, $id)
+    {
+        $data = Penginapan::find($id);
+        $validateData = $request->validate([
+            'nama_penginapan' => 'required',
+            'harga' => 'required|integer',
+            'deskripsi' => 'required',
+            'gambar' => 'image|file|max:1024',
+        ]);
+
+        if ($request->file('gambar')) {
+            $validateData['gambar'] = $request->file('gambar')->store('post-gambar');
+        }
+        $data->update($validateData);
+        return redirect('penginapan')->with('success', 'Data Berhasil Diupdate');
+    }
+
+    public function destroy_penginapan($id)
+    {
+        $data = Penginapan::findorfail($id);
+        $data->delete();
+        return back()->with('info', 'Data Berhasil Dihapus');
+        // return redirect('data-user')->with('success', 'Data Berhasil Diupdate');
+    }
+
+    /*
+|--------------------------------------------------------------------------
+| Paket Wisata
+|--------------------------------------------------------------------------
+*/
+
+    public function wisata()
+    {
+        $data = Wisata::all();
+        return view('admin.paket-wisata', compact('data'));
+    }
+
+    public function add_wisata()
+    {
+        return view('admin.crud.paketwisata.add-paketwisata');
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     */
+    public function simpan_wisata(Request $request)
+    {
+       
+        $validateData = $request->validate([
+            'nama_paket' => 'required',
+            'tujuan_wisata' => 'required',
+            'durasi' => 'required',
+            'harga' => 'required|integer',
+            'deskripsi' => 'required',
+            'gambar' => 'image|file|max:1024',
+        ]);
+
+        if ($request->file('gambar')) {
+            $validateData['gambar'] = $request->file('gambar')->store('post-gambar');
+        }
+
+        Wisata::create($validateData);
+        return redirect('wisata')->with('success', 'Data Berhasil Ditambahkan');
+    }
+
+    public function edit_wisata($id)
+    {
+        $data = Wisata::findorfail($id);
+        return view('admin.crud.paketwisata.edit-paketwisata', compact('data'));
+        // return view('admin.edit', ['No' => $data]);
+    }
+
+    public function update_wisata(Request $request, $id)
+    {
+        $data = Wisata::find($id);
+        $validateData = $request->validate([
+            'nama_paket' => 'required',
+            'tujuan_wisata' => 'required',
+            'durasi' => 'required',
+            'harga' => 'required|integer',
+            'deskripsi' => 'required',
+            'gambar' => 'image|file|max:1024',
+        ]);
+
+        if ($request->file('gambar')) {
+            $validateData['gambar'] = $request->file('gambar')->store('post-gambar');
+        }
+        $data->update($validateData);
+        return redirect('wisata')->with('success', 'Data Berhasil Diupdate');
+    }
+
+    public function destroy_wisata($id)
+    {
+        $data = Wisata::findorfail($id);
+        $data->delete();
+        return back()->with('info', 'Data Berhasil Dihapus');
+        // return redirect('data-user')->with('success', 'Data Berhasil Diupdate');
+    }
 }

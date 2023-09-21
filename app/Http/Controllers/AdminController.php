@@ -20,7 +20,7 @@ class AdminController extends Controller
         'name' => 'required',
         'level' => 'required',
         'email' => 'required|unique:users|email:dns',
-        'password' => 'required',
+        'password' => 'required|min:8',
     ]);
    
         User::create($validateData);

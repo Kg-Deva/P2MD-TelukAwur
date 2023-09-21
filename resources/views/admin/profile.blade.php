@@ -4,7 +4,7 @@
       data-assets-path="../assets/" data-template="vertical-menu-template-free">
 
   <head>
-      <title>Profiles</title>
+      <title>Profile</title>
 
       @include('admin.layouts.head')
   </head>
@@ -66,7 +66,7 @@
                                                                   Edit</a>
                                                               <a class="dropdown-item"
                                                                   href="{{ url('delete-profile', $d->id) }}"
-                                                                  onclick="confirmDelete(event)"><i
+                                                                  onclick="confirmation(event)"><i
                                                                       class="bx bx-trash me-1"></i>
                                                                   Delete</a>
                                                           </div>
@@ -88,7 +88,54 @@
                       <!-- Footer -->
                       @include('admin.layouts.footer')
                       <!-- / Footer -->
-                      @include('admin.function.delete')
+                      <script>
+                          function confirmation(ev) {
+                              ev.preventDefault();
+                              var urlToRedirect = ev.currentTarget.getAttribute('delete-profile');
+                              console.log(urlToRedirect);
+                              swal({
+                                      title: "Are you sure to Delete this post",
+                                      text: "You will not be able to revert this!",
+                                      icon: "warning",
+                                      buttons: true,
+                                      dangerMode: true,
+                                  })
+                                  .then((willCancel) => {
+                                      if (willCancel) {
+
+
+
+                                          window.location.href = urlToRedirect;
+
+                                      }
+
+
+                                  });
+
+
+                          }
+                      </script>
+
+                      {{-- <script>
+                        function confirmDelete(item_id) {
+                            swal({
+                                    title: 'Apakah Anda Yakin?',
+                                    text: "Anda Tidak Akan Dapat Mengembalikannya!",
+                                    type: 'warning',
+                                    showCancelButton: true,
+                                    confirmButtonColor: '#3085d6',
+                                    cancelButtonColor: '#d33',
+                                    confirmButtonText: 'Yes, delete it!'
+                                })
+                                .then((willDelete) => {
+                                    if (willDelete) {
+                                        $('#' + item_id).submit();
+                                    } else {
+                                        swal("Cancelled Successfully");
+                                    }
+                                });
+                        }
+                    </script> --}}
 
   </body>
 

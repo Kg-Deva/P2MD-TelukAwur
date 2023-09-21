@@ -66,7 +66,7 @@
                                                                 Edit</a>
                                                             <a class="dropdown-item"
                                                                 href="{{ url('delete-spot', $d->id) }}"
-                                                                onclick="confirmDelete(event)"><i
+                                                                onclick="confirmation(event)"><i
                                                                     class="bx bx-trash me-1"></i>
                                                                 Delete</a>
                                                         </div>

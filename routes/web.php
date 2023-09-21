@@ -81,7 +81,23 @@ Route::group(['middleware' => ['auth','ceklevel:admin,user']], function () {
      Route::get('/edit-kontak/{id}', [MenuController::class, 'edit_kontak'])->name('edit-kontak');
      Route::post('/update-kontak/{id}', [MenuController::class, 'update_kontak'])->name('update-kontak');
      Route::get('/delete-kontak/{id}', [MenuController::class, 'destroy_kontak'])->name('delete-kontak');
+
+      //penginapan
+      Route::get('/penginapan', [MenuController::class, 'penginapan'])->name('penginapan');
+      Route::get('/add-penginapan', [MenuController::class, 'add_penginapan'])->name('add-penginapan');
+      Route::post('/simpan-penginapan', [MenuController::class, 'simpan_penginapan'])->name('simpan-penginapan');
+      Route::get('/edit-penginapan/{id}', [MenuController::class, 'edit_penginapan'])->name('edit-penginapan');
+      Route::post('/update-penginapan/{id}', [MenuController::class, 'update_penginapan'])->name('update-penginapan');
+      Route::get('/delete-penginapan/{id}', [MenuController::class, 'destroy_penginapan'])->name('delete-penginapan');
     
+//paket wisata
+Route::get('/wisata', [MenuController::class, 'wisata'])->name('wisata');
+Route::get('/add-wisata', [MenuController::class, 'add_wisata'])->name('add-wisata');
+Route::post('/simpan-wisata', [MenuController::class, 'simpan_wisata'])->name('simpan-wisata');
+Route::get('/edit-wisata/{id}', [MenuController::class, 'edit_wisata'])->name('edit-wisata');
+Route::post('/update-wisata/{id}', [MenuController::class, 'update_wisata'])->name('update-wisata');
+Route::get('/delete-wisata/{id}', [MenuController::class, 'destroy_wisata'])->name('delete-wisata');
+
 });
 
 Route::group(['middleware' => ['auth','ceklevel:admin']], function () {

@@ -4,7 +4,7 @@
     data-assets-path="../assets/" data-template="vertical-menu-template-free">
 
 <head>
-    <title>Tables - Basic Tables | Sneat - Bootstrap 5 HTML Admin Template - Pro</title>
+    <title>Edit | Paket Wisata</title>
 
     @include('admin.layouts.head')
 </head>
@@ -32,32 +32,31 @@
                                 <div class="card mb-4">
                                     <h5 class="card-header">Merged</h5>
                                     <div class="card-body">
-                                        <form class="mb-3" action="{{ url('update-kuliner', $data->id) }}"
+                                        <form class="mb-3" action="{{ url('update-wisata', $data->id) }}"
                                             method="POST" enctype="multipart/form-data">
                                             {{ csrf_field() }}
 
                                             <div class="card-body demo-vertical-spacing demo-only-element">
                                                 <div>
-                                                    <label for="basicInput">Nama Kuliner</label>
+                                                    <label for="basicInput">Nama Paket Wisata</label>
                                                     <input class="form-control" aria-label="With textarea"
-                                                        placeholder="Nama Kuliner" name="nama_kuliner" type="text"
-                                                        value="{{ $data->nama_kuliner }}">
+                                                        placeholder="Nama Paket Wisata" name="nama_paket" type="text"
+                                                        value="{{ $data->nama_paket }}">
                                                 </div>
                                                 <div>
-                                                    <label for="basicInput">Deskripsi</label>
-                                                    <textarea class="form-control" aria-label="With textarea" placeholder="Deskripsi" name="deskripsi" type="text">{{ $data['deskripsi'] }}</textarea>
+                                                    <label for="basicInput">Tujuan Wisata</label>
+                                                    <input class="form-control" aria-label="With textarea"
+                                                        placeholder="Tujuan Wisata" name="tujuan_wisata" type="text"
+                                                        value="{{ $data->tujuan_wisata }}">
                                                 </div>
                                                 <div>
-                                                    <label for="basicInput">Nama Warung</label>
+                                                    <label for="basicInput">Durasi</label>
                                                     <input class="form-control" aria-label="With textarea"
-                                                        placeholder="Nama Warung" name="nama_warung" type="text"
-                                                        value="{{ $data->nama_warung }}">
+                                                        placeholder="Durasi" name="durasi" type="text"
+                                                        value="{{ $data->durasi }}">
                                                 </div>
                                                 <div>
                                                     <label for="basicInput">Harga</label>
-                                                    {{-- <input class="form-control" aria-label="With textarea"
-                                                        placeholder="Harga" name="harga" type="text"
-                                                        value="Rp. {{ $data->harga }}"> --}}
                                                     <input class="form-control @error('harga') is-invalid @enderror"
                                                         type="text" id="harga" name="harga"
                                                         value="{{ $data->harga }}">
@@ -66,6 +65,10 @@
                                                             {{ $message }}
                                                         </div>
                                                     @enderror
+                                                </div>
+                                                <div>
+                                                    <label for="basicInput">Deskripsi</label>
+                                                    <textarea class="form-control" aria-label="With textarea" placeholder="Deskripsi" name="deskripsi" type="text">{{ $data['deskripsi'] }}</textarea>
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="basicInput">Gambar</label>
@@ -88,7 +91,7 @@
                                         <button class="btn btn-primary d-grid w-100">Update</button>
                                         <!-- <button class="btn btn-danger d-grid w-100"><a href="/data-user"></a></button> -->
                                         </form>
-                                        <button class="btn btn-danger d-grid w-100"><a href="/kuliner"
+                                        <button class="btn btn-danger d-grid w-100"><a href="/wisata"
                                                 style="color: white;">Back</a></button>
                                     </div>
                                 </div>

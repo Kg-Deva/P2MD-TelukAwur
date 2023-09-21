@@ -88,14 +88,14 @@
                 </li>
 
                 <li class="menu-item">
-                    <a href="" class="menu-link">
+                    <a href="/wisata" class="menu-link">
                         <i class="menu-icon tf-icons bi bi-luggage"></i>
                         <div data-i18n="Analytics">Paket Wisata</div>
                     </a>
                 </li>
 
                 <li class="menu-item">
-                    <a href="" class="menu-link">
+                    <a href="/penginapan" class="menu-link">
                         <i class="menu-icon tf-icons bi bi-shop-window"></i>
                         <div data-i18n="Analytics">Penginapan</div>
                     </a>

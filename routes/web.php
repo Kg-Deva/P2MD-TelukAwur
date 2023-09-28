@@ -115,7 +115,11 @@ Route::group(['middleware' => ['auth','ceklevel:admin']], function () {
 |--------------------------------------------------------------------------
 */
 Route::get('/', function () {
-    return view('home');
+    $spot_pantai = DB::table('spot_pantai')->get();
+    return view('home',[
+        'spot_pantai' => $spot_pantai
+    ]
+    );
 });
 
 

@@ -70,7 +70,7 @@
           <li><a class="nav-link scrollto " href="#wisata">Paket Wisata</a></li>
           <li><a class="nav-link scrollto" href="#penginapan">Penginapan</a></li>
           <li><a class="nav-link scrollto" href="#contact">Kontak</a></li>
-          <li><a style="color: #106eea;" class="btn btn-light rounded-pill py-2 px-4" href="#" role="button">Register</a></li>
+          <li><a style="color: #106eea;" class="btn btn-light rounded-pill py-2 px-4" href="/login" role="button">Register</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->

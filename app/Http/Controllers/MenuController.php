@@ -9,7 +9,7 @@ use App\Models\SpotPantai;
 use App\Models\Kuliner;
 use App\Models\Penginapan;
 use App\Models\Wisata;
-
+use App\Models\Footer;
 use Illuminate\Http\Request;
 
 class MenuController extends Controller
@@ -473,6 +473,67 @@ class MenuController extends Controller
     public function destroy_wisata($id)
     {
         $data = Wisata::findorfail($id);
+        $data->delete();
+        return back()->with('info', 'Data Berhasil Dihapus');
+        // return redirect('data-user')->with('success', 'Data Berhasil Diupdate');
+    }
+
+/* 
+|--------------------------------------------------------------------------
+|  Footer
+|--------------------------------------------------------------------------
+*/
+
+    public function footer()
+    {
+        $data = Footer::all();
+        return view('admin.footer', compact('data'));
+    }
+
+    public function add_footer()
+    {
+        return view('admin.crud.footer.add-footer');
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     */
+    public function simpan_footer(Request $request)
+    {
+        // dd($request->all());
+
+        $validateData = $request->validate([
+            'lokasi' => 'required',
+            'email' => 'required|unique:footer|email:dns',
+            'telepon' => 'required|integer',
+        ]);
+
+       Footer::create($validateData);
+return redirect('footer')->with('success', 'Data Berhasil Ditambahkan');
+    }
+
+    public function edit_footer($id)
+    {
+        $data = Footer::findorfail($id);
+        return view('admin.crud.footer.edit-footer', compact('data'));
+        // return view('admin.edit', ['No' => $data]);
+    }
+
+    public function update_footer(Request $request, $id)
+    {
+        $data = Footer::find($id);
+        $validateData = $request->validate([
+            'lokasi' => 'required',
+            'email' => 'required|unique:footer|email:dns',
+            'telepon' => 'required|integer',
+        ]);
+
+        $data->update($validateData);
+        return redirect('footer')->with('success', 'Data Berhasil Diupdate');
+    }
+    public function destroy_footer($id)
+    {
+        $data = Footer::findorfail($id);
         $data->delete();
         return back()->with('info', 'Data Berhasil Dihapus');
         // return redirect('data-user')->with('success', 'Data Berhasil Diupdate');

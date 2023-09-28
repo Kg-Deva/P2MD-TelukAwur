@@ -62,8 +62,6 @@ class AdminController extends Controller
 
     public function administrator()
     {
-    //    $data=User::all();
-    // return $data
     return view('admin.administrator');
 
     }

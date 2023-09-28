@@ -4,7 +4,7 @@
     data-assets-path="../assets/" data-template="vertical-menu-template-free">
 
 <head>
-    <title>Edit | Kontak</title>
+    <title>Add | Footer</title>
 
     @include('admin.layouts.head')
 </head>
@@ -32,28 +32,26 @@
                                 <div class="card mb-4">
                                     <h5 class="card-header">Merged</h5>
                                     <div class="card-body">
-                                        <form class="mb-3" action="{{ url('update-kontak', $data->id) }}"
-                                            method="POST" enctype="multipart/form-data">
+                                        <form class="mb-3" action="{{ route('simpan-footer') }}" method="POST"
+                                            enctype="multipart/form-data">
                                             {{ csrf_field() }}
 
                                             <div class="card-body demo-vertical-spacing demo-only-element">
                                                 <div>
                                                     <label for="basicInput">Lokasi</label>
                                                     <input class="form-control" aria-label="With textarea"
-                                                        placeholder="Lokasi" name="lokasi" type="text"
-                                                        value="{{ $data->lokasi }}">
+                                                        placeholder="Lokasi" name="lokasi" type="text">
                                                 </div>
                                                 <div>
                                                     <label for="basicInput">Email</label>
                                                     <input class="form-control" aria-label="With textarea"
-                                                        placeholder="Email" name="email" type="text"
-                                                        value="{{ $data->email }}">
+                                                        placeholder="Email" name="email" type="text">
                                                 </div>
                                                 <div>
                                                     <label for="basicInput">Telepon</label>
                                                     <input class="form-control @error('telepon') is-invalid @enderror"
                                                         type="text" id="telepon" name="telepon"
-                                                        placeholder="Telepon" value="{{ $data->telepon }}">
+                                                        placeholder="Telepon">
                                                     @error('telepon')
                                                         <div class="invalid-feedback">
                                                             {{ $message }}
@@ -61,10 +59,10 @@
                                                     @enderror
                                                 </div>
                                         </form>
-                                        <button class="btn btn-primary d-grid w-100">Update</button>
+                                        <button class="btn btn-primary d-grid w-100">Add</button>
                                         <!-- <button class="btn btn-danger d-grid w-100"><a href="/data-user"></a></button> -->
                                         </form>
-                                        <button class="btn btn-danger d-grid w-100"><a href="/kontak"
+                                        <button class="btn btn-danger d-grid w-100"><a href="/footer"
                                                 style="color: white;">Back</a></button>
                                     </div>
                                 </div>
@@ -72,12 +70,11 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- / Content -->
+                <!-- / Content -->
 
-            <!-- Footer -->
-            @include('admin.layouts.footer')
-            <!-- / Footer -->
+                <!-- Footer -->
+                @include('admin.layouts.footer')
+                <!-- / Footer -->
 
 </body>
 

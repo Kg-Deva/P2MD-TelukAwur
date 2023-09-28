@@ -109,7 +109,7 @@
                 </li>
 
                 <li class="menu-item">
-                    <a href="" class="menu-link">
+                    <a href="/footer" class="menu-link">
                         <i class="menu-icon tf-icons bi bi-thunderbolt"></i>
                         <div data-i18n="Analytics">Footer</div>
                     </a>
@@ -129,9 +129,11 @@
                 <!-- Logout -->
                 <li class="menu-item">
                     <a href="{{ route('logout') }}" class="menu-link">
+                        {{-- onclick="confirm(event)" --}}
                         <i class="menu-icon tf-icons bi bi-x-octagon"></i>
                         <div data-i18n="Analytics">Logout</div>
                     </a>
                 </li>
             </ul>
         </aside>
+        @include('admin.function.logout')

@@ -4,7 +4,7 @@
     data-assets-path="../assets/" data-template="vertical-menu-template-free">
 
 <head>
-    <title>Edit | Kontak</title>
+    <title>Edit | Footer</title>
 
     @include('admin.layouts.head')
 </head>
@@ -32,7 +32,7 @@
                                 <div class="card mb-4">
                                     <h5 class="card-header">Merged</h5>
                                     <div class="card-body">
-                                        <form class="mb-3" action="{{ url('update-kontak', $data->id) }}"
+                                        <form class="mb-3" action="{{ url('update-footer', $data->id) }}"
                                             method="POST" enctype="multipart/form-data">
                                             {{ csrf_field() }}
 
@@ -64,7 +64,7 @@
                                         <button class="btn btn-primary d-grid w-100">Update</button>
                                         <!-- <button class="btn btn-danger d-grid w-100"><a href="/data-user"></a></button> -->
                                         </form>
-                                        <button class="btn btn-danger d-grid w-100"><a href="/kontak"
+                                        <button class="btn btn-danger d-grid w-100"><a href="/footer"
                                                 style="color: white;">Back</a></button>
                                     </div>
                                 </div>

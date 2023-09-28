@@ -1,11 +1,11 @@
 <script>
-    function confirmation(ev) {
+    function confirm(ev) {
         ev.preventDefault();
         var urlToRedirect = ev.currentTarget.getAttribute('href');
         console.log(urlToRedirect);
         swal({
-                title: "Are you sure to Delete this post",
-                text: "You will not be able to revert this!",
+                title: "Apakah Anda Yakin Ingin Keluar?",
+                text: "Anda Akan Keluar Dari Dashboard ini!",
                 icon: "warning",
                 buttons: true,
                 dangerMode: true,

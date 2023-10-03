@@ -25,7 +25,6 @@ Route::post('/postlogin', [LoginController::class, 'postlogin'])->name('postlogi
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::group(['middleware' => ['auth', 'ceklevel:admin,user']], function () {
-
     Route::get('/administrator', [AdminController::class, 'administrator'])->name('administrator');
     Route::get('/profile', [MenuController::class, 'profile'])->name('profile');
     Route::get('/add-profile', [MenuController::class, 'add'])->name('add-profile');
@@ -105,10 +104,25 @@ Route::group(['middleware' => ['auth', 'ceklevel:admin']], function () {
 | ROUTE FRONTDEND
 |--------------------------------------------------------------------------
 */
+// Route::get('/', function () {
+//     $spot_pantai = DB::table('spot_pantai')->get();
+//     return view('home',[
+//         'spot_pantai' => $spot_pantai
+//     ]
+//     );
+// });
+
+// Route::get('/', function () {
+//     return view('home');
+// });
+
 Route::get('/', function () {
+    $penginapan = DB::table('penginapan')->get();
     $spot_pantai = DB::table('spot_pantai')->get();
-    return view('home',[
-        'spot_pantai' => $spot_pantai
-    ]
-    );
+    $kuliner = DB::table('kuliner')->get();
+    return view('home', [
+        'penginapan' => $penginapan,
+        'spot_pantai' => $spot_pantai,
+        'kuliner' => $kuliner,
+    ]);
 });

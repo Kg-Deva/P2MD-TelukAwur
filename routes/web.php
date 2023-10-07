@@ -120,9 +120,13 @@ Route::get('/', function () {
     $penginapan = DB::table('penginapan')->get();
     $spot_pantai = DB::table('spot_pantai')->get();
     $kuliner = DB::table('kuliner')->get();
+    $kontak = DB::table('kontak')->get();
+    $wisata = DB::table('wisata')->get();
     return view('home', [
         'penginapan' => $penginapan,
         'spot_pantai' => $spot_pantai,
         'kuliner' => $kuliner,
+        'kontak' => $kontak,
+        'wisata' => $wisata,
     ]);
 });

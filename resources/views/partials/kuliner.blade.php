@@ -18,7 +18,7 @@
                                 Warung:</strong>&nbsp;{{ $makanan->nama_warung }}
                             <br>
                             <i
-                                class="fas fa-tags text-primary me-2"></i><strong>Harga:</strong>&nbsp;{{ $makanan->harga }}
+                                class="fas fa-tags text-primary me-2"></i><strong>Harga:</strong>&nbsp;{{ formatRupiah($makanan->harga) }}
                         </p>
                         <!-- <p class="price">
                   $5.95

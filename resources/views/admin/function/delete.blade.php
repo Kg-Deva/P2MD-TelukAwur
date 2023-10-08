@@ -1,4 +1,4 @@
-<script>
+{{-- <script>
     function confirmation(ev) {
         ev.preventDefault();
         var urlToRedirect = ev.currentTarget.getAttribute('href');
@@ -24,4 +24,4 @@
 
 
     }
-</script>
+</script> --}}

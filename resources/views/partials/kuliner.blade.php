@@ -10,7 +10,7 @@
                 @foreach ($kuliner as $makanan)
                     <div class="col-lg-4 menu">
                         <a class="glightbox"><img src="{{ 'storage/' . $makanan->gambar }}" class="menu-img img-fluid"
-                                alt="" style="width:100%;height:250px"></a>
+                                alt="" style="width:100%;height:260px"></a>
                         <h4>{{ $makanan->nama_kuliner }}</h4>
                         <p>{{ $makanan->deskripsi }}</p>
                         <p class="ingredients">

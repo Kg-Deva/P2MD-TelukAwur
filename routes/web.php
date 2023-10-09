@@ -104,17 +104,6 @@ Route::group(['middleware' => ['auth', 'ceklevel:admin']], function () {
 | ROUTE FRONTDEND
 |--------------------------------------------------------------------------
 */
-// Route::get('/', function () {
-//     $spot_pantai = DB::table('spot_pantai')->get();
-//     return view('home',[
-//         'spot_pantai' => $spot_pantai
-//     ]
-//     );
-// });
-
-// Route::get('/', function () {
-//     return view('home');
-// });
 
 Route::get('/', function () {
     $penginapan = DB::table('penginapan')->get();

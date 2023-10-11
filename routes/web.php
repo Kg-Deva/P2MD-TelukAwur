@@ -126,3 +126,6 @@ Route::get('/', function () {
         'footer' => $footer,
     ]);
 });
+Route::get('/kulinerlain', function () {
+    return view('partials.kulinerlainnya');
+});

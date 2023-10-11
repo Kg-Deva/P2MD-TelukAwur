@@ -37,10 +37,13 @@
                       </div>
                   </div>
               </div>
-              @endforeach
-              
+              @endforeach  
+          </div>
+          <div class="titlepage p-4">
+            <a class="btn btn-primary" href="#" role="button">Lihat lainnya</a>
           </div>
       </div>
+
     </section>
 
   <!-- Penginapan End -->

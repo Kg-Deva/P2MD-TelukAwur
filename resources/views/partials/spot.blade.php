@@ -13,12 +13,12 @@
                           <div class="member-img">
                               <img src="{{ 'storage/' . $spot->gambar }}" class="img-fluid"
                                   style="height: 275px;width:100%;" alt="">
-                              <div class="social">
+                              <!-- <div class="social">
                                   <a href=""><i class="bi bi-twitter"></i></a>
                                   <a href=""><i class="bi bi-facebook"></i></a>
                                   <a href=""><i class="bi bi-instagram"></i></a>
                                   <a href=""><i class="bi bi-linkedin"></i></a>
-                              </div>
+                              </div> -->
                           </div>
                           <div class="member-info">
                               <h4>{{ $spot->nama_spot }}</h4>
@@ -27,9 +27,10 @@
                       </div>
                   </div>
               @endforeach
-
-
           </div>
+          <div class="titlepage p-2">
+            <a class="btn btn-primary" href="#" role="button">Lihat lainnya</a>
+            </div>
 
       </div>
   </section><!-- End Spot Section -->

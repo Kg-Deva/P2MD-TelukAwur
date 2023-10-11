@@ -17,15 +17,17 @@
                             <i class="fas fa-store text-primary me-2"></i><strong>Nama
                                 Warung:</strong>&nbsp;{{ $makanan->nama_warung }}
                             <br>
-                            <i
-                                class="fas fa-tags text-primary me-2"></i><strong>Harga:</strong>&nbsp;{{ formatRupiah($makanan->harga) }}
+                            <i class="fas fa-tags text-primary me-2"></i><strong>Harga:</strong>&nbsp;{{ formatRupiah($makanan->harga) }}
+                            <br>
+                            <i class="fas fa-phone-alt text-primary me-2"></i><strong>
+                                Telepon:</strong>&nbsp;<a class="link-opacity-10" href="{{ $makanan->whatsapp }}">Link whatsapp</a>
                         </p>
-                        <!-- <p class="price">
-                  $5.95
-                </p> -->
                     </div><!-- Menu Item -->
                 @endforeach
 
+            </div>
+            <div class="titlepage">
+            <a class="btn btn-primary" href="#" role="button">Lihat lainnya</a>
             </div>
             {{ $kuliner->links() }}
         </div>

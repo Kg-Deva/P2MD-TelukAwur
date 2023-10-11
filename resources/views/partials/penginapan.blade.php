@@ -20,17 +20,17 @@
                             <div class="text-center p-4">
                                 <h3 class="mb-0">{{ formatRupiah($tempat->harga) }}</h3>
                                 <div class="mb-3">
-                                    <small class="fa fa-star text-primary"></small>
-                                    <small class="fa fa-star text-primary"></small>
-                                    <small class="fa fa-star text-primary"></small>
-                                    <small class="fa fa-star text-primary"></small>
-                                    <small class="fa fa-star text-primary"></small>
+                                <i class="fas fa-map-marked-alt text-primary me-2"></i><strong>
+                                Lokasi:</strong>&nbsp;<a class="link-opacity-10" href="{{ $tempat->gmaps }}">lokasi penginapan</a>
                                 </div>
                                 <p>{{ $tempat->deskripsi }}</p>
                             </div>
                         </div>
                     </div>
                 @endforeach
+            </div>
+            <div class="titlepage p-4">
+            <a class="btn btn-primary" href="#" role="button">Lihat lainnya</a>
             </div>
 
         </div>

@@ -5,7 +5,7 @@
 
         <div class="col-lg-5 col-md-6 footer-links">
             <!-- <h4>Our Social Networks</h4> -->
-            <img src="assets/img/logopcs.png" alt="">
+            <img src="assets/img/LOGO-BUMDES.png" alt=""><img src="assets/img/LOGO-PANTAI.png" alt="">
             <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
             <div class="social-links mt-3">
               <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
@@ -27,17 +27,17 @@
               <li><i class="bx bx-chevron-right"></i> <a href="#penginapan">Penginapan</a></li>
             </ul>
           </div>
+          @foreach ($footer as $d)
 
           <div class="col-lg-3 col-md-6 footer-contact">
             <h4><span>Kontak Hubung</span></h4>
             <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
+              {{ $d->lokasi }}<br>
+              <strong>Phone:</strong> {{ $d->telepon }}<br>
+              <strong>Email:</strong> {{ $d->email }}<br>
             </p>
           </div>
+          @endforeach
 
         </div>
       </div>

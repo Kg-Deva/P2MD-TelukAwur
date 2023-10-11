@@ -109,11 +109,11 @@ Route::group(['middleware' => ['auth', 'ceklevel:admin']], function () {
 Route::get('/', function () {
     $beranda = DB::table('beranda')->get();
     $profile = DB::table('profile')->get();
-    $penginapan = DB::table('penginapan')->get();
-    $spot_pantai = DB::table('spot_pantai')->get();
+    $penginapan = DB::table('penginapan')->paginate(6);
+    $spot_pantai = DB::table('spot_pantai')->paginate(6);
     $kuliner = DB::table('kuliner')->paginate(6);
     $kontak = DB::table('kontak')->get();
-    $wisata = DB::table('wisata')->get();
+    $wisata = DB::table('wisata')->paginate(6);
     $footer = DB::table('footer')->get();
     return view('home', [
         'beranda' => $beranda,
@@ -126,6 +126,28 @@ Route::get('/', function () {
         'footer' => $footer,
     ]);
 });
+
 Route::get('/kulinerlain', function () {
-    return view('partials.kulinerlainnya');
+    $kuliner1 = DB::table('kuliner')->paginate(6);
+    return view('partials.kulinerlainnya', [
+        'kuliner' => $kuliner1,
+    ]);
+});
+Route::get('/penginapanlain', function () {
+    $penginapan1 = DB::table('penginapan')->paginate(6);
+    return view('partials.penginapanlainnya', [
+        'penginapan' => $penginapan1,
+    ]);
+});
+Route::get('/spotlain', function () {
+    $spot1 = DB::table('spot_pantai')->paginate(6);
+    return view('partials.spotlainnya', [
+        'spot_pantai' => $spot1,
+    ]);
+});
+Route::get('/wisatalain', function () {
+    $wisata1 = DB::table('wisata')->paginate(6);
+    return view('partials.wisatalainnya', [
+        'wisata' => $wisata1,
+    ]);
 });

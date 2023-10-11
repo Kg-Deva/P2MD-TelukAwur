@@ -46,7 +46,7 @@
                         </svg> --}}
 
                     </span>
-                    <img src="assets\img\admin\logo.png" style="width: 50%">
+                    <img src="..\assets\img\admin\logo.png" style="width: 50%" alt="">
                     {{-- <span class="app-brand-text demo menu-text fw-bolder ms-2">Teluk Awur</span> --}}
                 </a>
 

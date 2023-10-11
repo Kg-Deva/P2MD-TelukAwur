@@ -30,7 +30,7 @@
 
                             <div class="col-md-6">
                                 <div class="card mb-4">
-                                    <h5 class="card-header">Merged</h5>
+                                    <h5 class="card-header">Add Paket Wisata</h5>
                                     <div class="card-body">
                                         <form class="mb-3" action="{{ route('simpan-wisata') }}" method="POST"
                                             enctype="multipart/form-data">

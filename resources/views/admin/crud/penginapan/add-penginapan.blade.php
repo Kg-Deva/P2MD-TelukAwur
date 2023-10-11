@@ -4,7 +4,7 @@
     data-assets-path="../assets/" data-template="vertical-menu-template-free">
 
 <head>
-    <title>Add | Penginapan</title>
+    <title>Add Penginapan</title>
 
     @include('admin.layouts.head')
 </head>
@@ -30,7 +30,7 @@
 
                             <div class="col-md-6">
                                 <div class="card mb-4">
-                                    <h5 class="card-header">Merged</h5>
+                                    <h5 class="card-header">Add Penginapan</h5>
                                     <div class="card-body">
                                         <form class="mb-3" action="{{ route('simpan-penginapan') }}" method="POST"
                                             enctype="multipart/form-data">
@@ -52,6 +52,11 @@
                                                     <label for="basicInput">Deskripsi</label>
                                                     <textarea class="form-control" aria-label="With textarea" placeholder="Deskripsi" name="deskripsi" type="text"></textarea>
                                                 </div>
+                                                <div>
+                                                    <label for="basicInput">Gmaps</label>
+                                                    <input class="form-control" aria-label="With textarea"
+                                                        placeholder="Google Maps" name="gmaps" type="text">
+                                                </div>
                                                 <div class="form-group">
                                                     <label for="basicInput">Gambar</label>
                                                     <input class="form-control @error('gambar') is-invalid @enderror"
@@ -61,12 +66,9 @@
                                                             {{ $message }}
                                                         </div>
                                                     @enderror
-                                                    <!-- <label for="image" class="form-label">Picture</label> -->
-                                                    <!-- <input class="form-control" type="file" id="gambar" name="gambar"> -->
                                                 </div>
                                         </form>
                                         <button class="btn btn-primary d-grid w-100">Add</button>
-                                        <!-- <button class="btn btn-danger d-grid w-100"><a href="/data-user"></a></button> -->
                                         </form>
                                         <button class="btn btn-danger d-grid w-100"><a href="/penginapan"
                                                 style="color: white;">Back</a></button>

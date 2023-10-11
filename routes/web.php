@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MenuController;
 use GuzzleHttp\Middleware;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -106,16 +107,22 @@ Route::group(['middleware' => ['auth', 'ceklevel:admin']], function () {
 */
 
 Route::get('/', function () {
+    $beranda = DB::table('beranda')->get();
+    $profile = DB::table('profile')->get();
     $penginapan = DB::table('penginapan')->get();
     $spot_pantai = DB::table('spot_pantai')->get();
-    $kuliner = DB::table('kuliner')->get();
+    $kuliner = DB::table('kuliner')->paginate(6);
     $kontak = DB::table('kontak')->get();
     $wisata = DB::table('wisata')->get();
+    $footer = DB::table('footer')->get();
     return view('home', [
+        'beranda' => $beranda,
+        'profile' => $profile,
         'penginapan' => $penginapan,
         'spot_pantai' => $spot_pantai,
         'kuliner' => $kuliner,
         'kontak' => $kontak,
         'wisata' => $wisata,
+        'footer' => $footer,
     ]);
 });

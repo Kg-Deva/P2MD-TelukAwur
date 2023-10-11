@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('nama_warung');
             $table->integer('harga');
             $table->string('gambar');
+            $table->string('whatsapp');
             $table->timestamps();
         });
     }

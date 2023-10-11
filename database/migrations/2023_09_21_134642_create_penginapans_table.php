@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('nama_penginapan');
             $table->integer('harga');
             $table->string('deskripsi');
+            $table->string('gmaps');
             $table->string('gambar');
             $table->timestamps();
         });

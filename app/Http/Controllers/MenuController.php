@@ -210,7 +210,7 @@ class MenuController extends Controller
 
     public function kuliner()
     {
-        $data = Kuliner::all();
+        $data = Kuliner::paginate(5);
         return view('admin.kuliner', compact('data'));
     }
 
@@ -231,6 +231,7 @@ class MenuController extends Controller
             'deskripsi' => 'required',
             'nama_warung' => 'required',
             'harga' => 'required|integer',
+            'whatsapp' => 'required|max:2048',
             'gambar' => 'image|file|max:1024',
         ]);
 
@@ -257,6 +258,7 @@ class MenuController extends Controller
             'deskripsi' => 'required',
             'nama_warung' => 'required',
             'harga' => 'required|integer',
+            'whatsapp' => 'required|max:2048',
             'gambar' => 'image|file|max:1024',
         ]);
 
@@ -361,6 +363,7 @@ class MenuController extends Controller
             'nama_penginapan' => 'required',
             'harga' => 'required|integer',
             'deskripsi' => 'required',
+            'gmaps' => 'required|max:2048',
             'gambar' => 'image|file|max:1024',
         ]);
 
@@ -386,6 +389,7 @@ class MenuController extends Controller
             'nama_penginapan' => 'required',
             'harga' => 'required|integer',
             'deskripsi' => 'required',
+            'gmaps' => 'required|max:2048',
             'gambar' => 'image|file|max:1024',
         ]);
 

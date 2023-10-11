@@ -51,13 +51,13 @@
                                             </tr>
                                         </thead>
                                         @php
-                                            $no = 1;
-                                            $edit = 1;
+                                            $no = 0;
+                                            
                                         @endphp
                                         @foreach ($data as $d)
                                             <tbody>
                                                 <tr>
-                                                    <td>{{ $no++ }}</td>
+                                                    <td>{{ $data->firstitem() + $no++ }}</td>
                                                     <td>{{ $d['name'] }}</td>
                                                     <td>{{ $d['level'] }}</td>
                                                     <td>{{ $d['email'] }}</td>

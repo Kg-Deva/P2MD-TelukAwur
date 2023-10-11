@@ -27,6 +27,7 @@
                 @endforeach
 
             </div>
+            {{ $kuliner->links() }}
         </div>
         </div>
         </div>

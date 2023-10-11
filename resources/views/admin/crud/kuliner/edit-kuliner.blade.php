@@ -4,7 +4,7 @@
     data-assets-path="../assets/" data-template="vertical-menu-template-free">
 
 <head>
-    <title>Tables - Basic Tables | Sneat - Bootstrap 5 HTML Admin Template - Pro</title>
+    <title>Edit Kuliner</title>
 
     @include('admin.layouts.head')
 </head>
@@ -30,7 +30,7 @@
 
                             <div class="col-md-6">
                                 <div class="card mb-4">
-                                    <h5 class="card-header">Merged</h5>
+                                    <h5 class="card-header">Edit Kuliner</h5>
                                     <div class="card-body">
                                         <form class="mb-3" action="{{ url('update-kuliner', $data->id) }}"
                                             method="POST" enctype="multipart/form-data">
@@ -55,9 +55,6 @@
                                                 </div>
                                                 <div>
                                                     <label for="basicInput">Harga</label>
-                                                    {{-- <input class="form-control" aria-label="With textarea"
-                                                        placeholder="Harga" name="harga" type="text"
-                                                        value="Rp. {{ $data->harga }}"> --}}
                                                     <input class="form-control @error('harga') is-invalid @enderror"
                                                         type="text" id="harga" name="harga"
                                                         value="{{ $data->harga }}">
@@ -66,6 +63,12 @@
                                                             {{ $message }}
                                                         </div>
                                                     @enderror
+                                                </div>
+                                                <div>
+                                                    <label for="basicInput">WhatsApp</label>
+                                                    <input class="form-control" aria-label="With textarea"
+                                                        placeholder="WhatsApp" name="whatsapp" type="text"
+                                                        value="{{ $data->whatsapp }}">
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="basicInput">Gambar</label>

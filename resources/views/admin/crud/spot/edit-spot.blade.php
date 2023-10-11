@@ -4,7 +4,7 @@
     data-assets-path="../assets/" data-template="vertical-menu-template-free">
 
 <head>
-    <title>Tables - Basic Tables | Sneat - Bootstrap 5 HTML Admin Template - Pro</title>
+    <title>Edit Spot Pantai</title>
 
     @include('admin.layouts.head')
 </head>
@@ -30,7 +30,7 @@
 
                             <div class="col-md-6">
                                 <div class="card mb-4">
-                                    <h5 class="card-header">Merged</h5>
+                                    <h5 class="card-header">Edit Spot Pantai</h5>
                                     <div class="card-body">
                                         <form class="mb-3" action="{{ url('update-spot', $data->id) }}" method="POST"
                                             enctype="multipart/form-data">
@@ -66,7 +66,7 @@
                                         <button class="btn btn-primary d-grid w-100">Update</button>
                                         <!-- <button class="btn btn-danger d-grid w-100"><a href="/data-user"></a></button> -->
                                         </form>
-                                        <button class="btn btn-danger d-grid w-100"><a href="/spot"
+                                        <button class="btn btn-danger d-grid w-100"><a href="/spot-pantai"
                                                 style="color: white;">Back</a></button>
                                     </div>
                                 </div>

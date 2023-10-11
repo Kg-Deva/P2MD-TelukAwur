@@ -47,24 +47,30 @@
                                                 <th>Deskripsi</th>
                                                 <th>Nama Warung</th>
                                                 <th>Harga</th>
+                                                <th>WhatsApp</th>
                                                 <th>Gambar</th>
                                                 <th>Actions</th>
                                             </tr>
                                         </thead>
                                         @php
-                                            $no = 1;
+                                            $no = 0;
                                         @endphp
                                         @foreach ($data as $d)
                                             <tbody>
                                                 <tr>
-                                                    <td>{{ $no++ }}</td>
+                                                    <td>{{ $data->firstitem() + $no++ }}</td>
                                                     <td>{{ $d['nama_kuliner'] }}</td>
                                                     <td>{{ $d['deskripsi'] }}</td>
                                                     <td>{{ $d['nama_warung'] }}</td>
                                                     <td>{{ $d->formatRupiah('harga') }}</td>
+                                                    <td>
+                                                        <a href="{{ $d['whatsapp'] }}" target="_blank">Links</a>
+                                                    </td>
                                                     <td><img src="{{ asset('storage/' . $d->gambar) }}" alt=""
                                                             style="width: 100px; height: 50px; "></td>
+
                                                     <td>
+
                                                         <div>
                                                             <a class="dropdown-item"
                                                                 href="{{ url('edit-kuliner', $d->id) }}"><i
@@ -83,6 +89,8 @@
 
                                         </tbody>
                                     </table>
+                                    <br>
+                                    {{ $data->links() }}
                                 </div>
                             </div>
 

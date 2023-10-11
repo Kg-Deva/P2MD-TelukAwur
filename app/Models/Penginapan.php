@@ -18,6 +18,7 @@ class Penginapan extends Model
         'nama_penginapan',
         'harga' ,
         'deskripsi' ,
+        'gmaps' ,
         'gambar'
     ];
     protected $hidden;

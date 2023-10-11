@@ -19,7 +19,8 @@ class Kuliner extends Model
         'deskripsi' ,
         'nama_warung' ,
         'harga' ,
-        'gambar'
+        'gambar',
+        'whatsapp'
     ];
     protected $hidden;
 }

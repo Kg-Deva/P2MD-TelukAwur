@@ -46,6 +46,7 @@
                                                 <th>Nama penginapan</th>
                                                 <th>Harga</th>
                                                 <th>Deskripsi</th>
+                                                <th>Gmaps</th>
                                                 <th>Gambar</th>
                                                 <th>Actions</th>
                                             </tr>
@@ -60,6 +61,9 @@
                                                     <td>{{ $d['nama_penginapan'] }}</td>
                                                     <td>{{ $d->formatRupiah('harga') }}</td>
                                                     <td>{{ $d['deskripsi'] }}</td>
+                                                    <td>
+                                                        <a href="{{ $d['gmaps'] }}" target="_blank">Links</a>
+                                                    </td>
                                                     <td><img src="{{ asset('storage/' . $d->gambar) }}" alt=""
                                                             style="width: 100px; height: 50px; "></td>
                                                     <td>

@@ -4,7 +4,7 @@
     data-assets-path="../assets/" data-template="vertical-menu-template-free">
 
 <head>
-    <title>Add | Footer</title>
+    <title>Add Footer</title>
 
     @include('admin.layouts.head')
 </head>
@@ -30,7 +30,7 @@
 
                             <div class="col-md-6">
                                 <div class="card mb-4">
-                                    <h5 class="card-header">Merged</h5>
+                                    <h5 class="card-header">Add Footer</h5>
                                     <div class="card-body">
                                         <form class="mb-3" action="{{ route('simpan-footer') }}" method="POST"
                                             enctype="multipart/form-data">

@@ -4,7 +4,7 @@
     data-assets-path="../assets/" data-template="vertical-menu-template-free">
 
 <head>
-    <title>Add | Paket Wisata</title>
+    <title>Add Paket Wisata</title>
 
     @include('admin.layouts.head')
 </head>
@@ -62,6 +62,7 @@
                                                     <label for="basicInput">Deskripsi</label>
                                                     <textarea class="form-control" aria-label="With textarea" placeholder="Deskripsi" name="deskripsi" type="text"></textarea>
                                                 </div>
+
                                                 <div class="form-group">
                                                     <label for="basicInput">Gambar</label>
                                                     <input class="form-control @error('gambar') is-invalid @enderror"
@@ -71,12 +72,10 @@
                                                             {{ $message }}
                                                         </div>
                                                     @enderror
-                                                    <!-- <label for="image" class="form-label">Picture</label> -->
-                                                    <!-- <input class="form-control" type="file" id="gambar" name="gambar"> -->
+
                                                 </div>
                                         </form>
                                         <button class="btn btn-primary d-grid w-100">Add</button>
-                                        <!-- <button class="btn btn-danger d-grid w-100"><a href="/data-user"></a></button> -->
                                         </form>
                                         <button class="btn btn-danger d-grid w-100"><a href="/wisata"
                                                 style="color: white;">Back</a></button>

@@ -27,9 +27,8 @@
 
             </div>
             <div class="titlepage">
-            <a class="btn btn-primary" href="#" role="button">Lihat lainnya</a>
+            <a class="btn btn-primary" href="/kulinerlain" role="button">Lihat lainnya</a>
             </div>
-            {{ $kuliner->links() }}
         </div>
         </div>
         </div>

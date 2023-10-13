@@ -24,8 +24,8 @@
   <ul>
     <li><a class="nav-link scrollto" href="/">Beranda</a></li>
     <li><a class="nav-link scrollto" href="/#about">Profil</a></li>
-    <li><a class="nav-link scrollto" href="/spotlain">Spot Pantai</a></li>
-    <li><a class="nav-link scrollto active" href="/kulinerlain">Kuliner</a></li>
+    <li><a class="nav-link scrollto active" href="/spotlain">Spot Pantai</a></li>
+    <li><a class="nav-link scrollto" href="/kulinerlain">Kuliner</a></li>
     <li><a class="nav-link scrollto " href="/wisatalain">Paket Wisata</a></li>
     <li><a class="nav-link scrollto" href="/penginapanlain">Penginapan</a></li>
     <li><a class="nav-link scrollto" href="/#contact">Kontak</a></li>
@@ -39,43 +39,45 @@
 
 
   <main id="main">
-        <!-- ======= Menu Section ======= -->
-        <section id="warung">
-        <div class="container" data-aos="fade-up">
+  <!-- ======= Spot Section ======= -->
+  <section id="spot" class="team section-bg">
+      <div class="container" data-aos="fade-up">
 
-            <div class="titlepage">
-                <h2>Kuliner</h2>
-            </div>
+          <div class="titlepage">
+              <h2>Spot Pantai</h2>
+          </div>
 
-            <div class="row gy-5">
-                @foreach ($kuliner as $makanan)
-                    <div class="col-lg-4 menu">
-                        <a class="glightbox"><img src="{{ 'storage/' . $makanan->gambar }}" class="menu-img img-fluid"
-                                alt="" style="width:100%;height:260px"></a>
-                        <h4>{{ $makanan->nama_kuliner }}</h4>
-                        <p>{{ $makanan->deskripsi }}</p>
-                        <p class="ingredients">
-                            <i class="fas fa-store text-primary me-2"></i><strong>Nama
-                                Warung:</strong>&nbsp;{{ $makanan->nama_warung }}
-                            <br>
-                            <i class="fas fa-tags text-primary me-2"></i><strong>Harga:</strong>&nbsp;{{ formatRupiah($makanan->harga) }}
-                            <br>
-                            <i class="fas fa-phone-alt text-primary me-2"></i><strong>
-                                Telepon:</strong>&nbsp;<a class="link-opacity-10" href="{{ $makanan->whatsapp }}">Link whatsapp</a>
-                        </p>
-                    </div><!-- Menu Item -->
-                @endforeach
-
-            </div>
-            {{ $kuliner->links() }}
+          <div class="row">
+              @foreach ($spot_pantai as $spot)
+                  <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                      <div class="member">
+                          <div class="member-img">
+                              <img src="{{ 'storage/' . $spot->gambar }}" class="img-fluid"
+                                  style="height: 275px;width:100%;" alt="">
+                              <!-- <div class="social">
+                                  <a href=""><i class="bi bi-twitter"></i></a>
+                                  <a href=""><i class="bi bi-facebook"></i></a>
+                                  <a href=""><i class="bi bi-instagram"></i></a>
+                                  <a href=""><i class="bi bi-linkedin"></i></a>
+                              </div> -->
+                          </div>
+                          <div class="member-info">
+                              <h4>{{ $spot->nama_spot }}</h4>
+                              <!-- <span>Chief Executive Officer</span> -->
+                          </div>
+                      </div>
+                  </div>
+              @endforeach
+          </div>
+          {{ $spot_pantai->links() }}
             <div class="titlepage">
             <a class="btn btn-primary" href="/" role="button">Kembali</a>
             </div>
-            
-        </div>
-        </div>
-        </div>
-    </section><!-- End Warung Section -->
+
+      </div>
+  </section><!-- End Spot Section -->
+
+
 
   </main><!-- End #main -->
 

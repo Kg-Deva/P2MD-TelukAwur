@@ -30,7 +30,7 @@
                 @endforeach
             </div>
             <div class="titlepage p-4">
-            <a class="btn btn-primary" href="#" role="button">Lihat lainnya</a>
+            <a class="btn btn-primary" href="/penginapanlain" role="button">Lihat lainnya</a>
             </div>
 
         </div>

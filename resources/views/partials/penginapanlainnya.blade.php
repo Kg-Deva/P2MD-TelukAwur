@@ -15,7 +15,26 @@
 
   <!-- ======= Header ======= -->
   <header id="header" class="d-flex align-items-center">
-    @include('layout.header')
+  <div class="container d-flex align-items-center justify-content-between">
+
+<h1 class="logo"><img src="assets/img/LOGO-BUMDES.png" alt="#" style="width:100%"></h1>
+<h1 class="logo"><img src="assets/img/LOGO-PANTAI.png" alt="#" style="width:100%"></h1>
+
+<nav id="navbar" class="navbar">
+  <ul>
+    <li><a class="nav-link scrollto" href="/">Beranda</a></li>
+    <li><a class="nav-link scrollto" href="/#about">Profil</a></li>
+    <li><a class="nav-link scrollto" href="/spotlain">Spot Pantai</a></li>
+    <li><a class="nav-link scrollto" href="/kulinerlain">Kuliner</a></li>
+    <li><a class="nav-link scrollto " href="/wisatalain">Paket Wisata</a></li>
+    <li><a class="nav-link scrollto active" href="/penginapanlain">Penginapan</a></li>
+    <li><a class="nav-link scrollto" href="/#contact">Kontak</a></li>
+    <li><a style="color: #106eea;" class="btn btn-light rounded-pill py-2 px-4" href="/login" role="button">Login</a></li>
+  </ul>
+  <i class="bi bi-list mobile-nav-toggle"></i>
+</nav>
+
+</div>
   </header><!-- End Header -->
 
 

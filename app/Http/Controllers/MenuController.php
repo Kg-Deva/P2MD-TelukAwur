@@ -303,7 +303,7 @@ class MenuController extends Controller
         $validateData = $request->validate([
             'lokasi' => 'required',
             'email' => 'required|unique:kontak|email:dns',
-            'telepon' => 'required|integer',
+            'telepon' => 'required',
         ]);
 
         Kontak::create($validateData);
@@ -322,8 +322,8 @@ class MenuController extends Controller
         $data = Kontak::find($id);
         $validateData = $request->validate([
             'lokasi' => 'required',
-            'email' => 'required|unique:kontak|email:dns',
-            'telepon' => 'required|integer',
+            'email' => 'required|email:dns',
+            'telepon' => 'required',
         ]);
 
         $data->update($validateData);
@@ -508,8 +508,8 @@ class MenuController extends Controller
 
         $validateData = $request->validate([
             'lokasi' => 'required',
-            'email' => 'required|unique:footer|email:dns',
-            'telepon' => 'required|integer',
+            'email' => 'required|email:dns',
+            'telepon' => 'required',
         ]);
 
        Footer::create($validateData);
@@ -528,8 +528,8 @@ return redirect('footer')->with('success', 'Data Berhasil Ditambahkan');
         $data = Footer::find($id);
         $validateData = $request->validate([
             'lokasi' => 'required',
-            'email' => 'required|unique:footer|email:dns',
-            'telepon' => 'required|integer',
+            'email' => 'required|email:dns',
+            'telepon' => 'required',
         ]);
 
         $data->update($validateData);

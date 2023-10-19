@@ -65,11 +65,15 @@
                                                                 href="{{ url('edit-kontak', $d->id) }}"><i
                                                                     class="bx bx-edit-alt me-1"></i>
                                                                 Edit</a>
-                                                            <a class="dropdown-item"
-                                                                href="{{ url('delete-kontak', $d->id) }}"
-                                                                onclick="confirmation(event)"><i
-                                                                    class="bx bx-trash me-1"></i>
-                                                                Delete</a>
+
+
+                                                            @if (auth()->user()->level != 'user')
+                                                                <a class="dropdown-item"
+                                                                    href="{{ url('delete-kontak', $d->id) }}"
+                                                                    onclick="confirmation(event)"><i
+                                                                        class="bx bx-trash me-1"></i>
+                                                                    Delete</a>
+                                                            @endif
                                                         </div>
 
                                                     </td>

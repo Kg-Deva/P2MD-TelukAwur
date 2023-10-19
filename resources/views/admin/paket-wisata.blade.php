@@ -56,6 +56,12 @@
                                             $no = 1;
                                         @endphp
                                         @foreach ($data as $d)
+                                            @php
+                                                $kalimat = $d['deskripsi'];
+                                                $jumlahkarakter = 30;
+                                                $cetak = substr($kalimat, 0, $jumlahkarakter);
+                                                $hasil = $cetak . '...';
+                                            @endphp
                                             <tbody>
                                                 <tr>
                                                     <td>{{ $no++ }}</td>
@@ -63,7 +69,7 @@
                                                     <td>{{ $d['tujuan_wisata'] }}</td>
                                                     <td>{{ $d['durasi'] }}</td>
                                                     <td>{{ $d->formatRupiah('harga') }}</td>
-                                                    <td>{{ $d['deskripsi'] }}</td>
+                                                    <td>{!! $hasil !!}</td>
                                                     <td><img src="{{ asset('storage/' . $d->gambar) }}" alt=""
                                                             style="width: 100px; height: 50px; "></td>
                                                     <td>

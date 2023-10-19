@@ -44,7 +44,8 @@
                                                 </div>
                                                 <div>
                                                     <label for="basicInput">Deskripsi</label>
-                                                    <textarea class="form-control" aria-label="With textarea" placeholder="Deskripsi" name="deskripsi" type="text"></textarea>
+                                                    <textarea class="form-control" aria-label="With textarea" placeholder="Deskripsi" name="deskripsi" type="text"
+                                                        id="deskripsi"></textarea>
                                                 </div>
                                                 <div>
                                                     <label for="basicInput">Nama Warung</label>

@@ -40,7 +40,7 @@
                                                 <div>
                                                     <label for="basicInput">Deskripsi</label>
                                                     <textarea class="form-control" aria-label="With textarea" placeholder="Deskripsi" name="deskripsi" type="text"
-                                                        value="">{{ $data['deskripsi'] }}</textarea>
+                                                        id="deskripsi">{!! $data['deskripsi'] !!}</textarea>
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="basicInput">Gambar</label>

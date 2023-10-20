@@ -17,7 +17,6 @@
   <header id="header" class="d-flex align-items-center">
   <div class="container d-flex align-items-center justify-content-between">
 
-<h1 class="logo"><img src="assets/img/LOGO-BUMDES.png" alt="#" style="width:100%"></h1>
 <h1 class="logo"><img src="assets/img/LOGO-PANTAI.png" alt="#" style="width:100%"></h1>
 
 <nav id="navbar" class="navbar">
@@ -62,7 +61,7 @@
                                 <h3 class="mb-0">{{ formatRupiah($tempat->harga) }}</h3>
                                 <div class="mb-3">
                                 <i class="fas fa-map-marked-alt text-primary me-2"></i><strong>
-                                Lokasi:</strong>&nbsp;<a class="link-opacity-10" href="{{ $tempat->gmaps }}">lokasi penginapan</a>
+                                Lokasi:</strong>&nbsp;<a class="link-opacity-10" href="{{ $tempat->gmaps }}"target="_self">lokasi penginapan</a>
                                 </div>
                                 <p>{{ $tempat->deskripsi }}</p>
                             </div>

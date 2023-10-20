@@ -453,7 +453,16 @@ h6 {
   background-position: center;
   background-repeat: no-repeat;
 }
-
+#hero .carousel-item img {
+  position: absolute;
+  left: -1000%;
+  right: -1000%;
+  top: -1000%;
+  bottom: -1000%;
+  margin: auto;
+  min-height: 100%;
+  min-width: 100%;
+}
 #hero .carousel-item::before {
   content: "";
   background-color: rgba(30, 35, 40, 0.6);
@@ -665,69 +674,92 @@ color: #141012;
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
-.about {
-  padding-top: 0px !important;
-  padding: 90px 0px;
-  background-color: white;
-}
-.aboutheading {
-  text-align: center;
+/* About Us Section
+--------------------------------*/
+#about {
+  background: #fff;
+  padding: 60px 0;
 }
 
-.aboutheading span {
-  color: #141012;
-  font-size: 17px;
-  line-height: 32px;
-  display: block;
+#about .about-container .background {
+  margin: 20px 0;
 }
-.button_section {
+
+#about .about-container .content {
+  background: #fff;
+}
+
+#about .about-container .title {
+  color: #333;
+  font-weight: 700;
+  font-size: 32px;
+}
+
+#about .about-container p {
+  line-height: 26px;
+}
+
+#about .about-container p:last-child {
+  margin-bottom: 0;
+}
+
+#about .about-container .icon-box {
+  background: #fff;
+  background-size: cover;
+  padding: 0 0 30px 0;
+}
+
+#about .about-container .icon-box .icon {
+  float: left;
+  background: #fff;
+  width: 64px;
+  height: 64px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-}
-.about .about-box p {
-  font-size: 14px;
-  line-height: 32px;
-  color: #141012;
-  position: relative;
-  margin: 50px auto;
-  display: inline-block;
-  padding: 20px 0px;
-  padding-left: 25px;
-  padding-right: 150px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,5);
-  transition: 0.3s;
-  /* border-left: 15px solid #077f9b;
-  border-right: 15px solid #0c1e43;
-  border-radius: 5px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  background-position: 0 0, 0 100%;
-  background-repeat: no-repeat; */
-  /* -webkit-background-size: 100% 20px;
-  -moz-background-size: 100% 20px;
-  background-size: 100% 20px;
-  background-image: -webkit-linear-gradient(left, #077f9b 0%, #0c1e43 100%), -webkit-linear-gradient(left, #077f9b 0%, #0c1e43 100%);
-  background-image: -moz-linear-gradient(left, #077f9b 0%, #0c1e43 100%), -moz-linear-gradient(left, #077f9b 0%, #0c1e434 100%);
-  background-image: -o-linear-gradient(left, #077f9b 0%, #0c1e43 100%), -o-linear-gradient(left, #077f9b 0%, #0c1e43 100%);
-  background-image: linear-gradient(to right, #077f9b 0%, #0c1e43 100%), linear-gradient(to right, #077f9b 0%, #0c1e43 100%);
-  max-width: 1004px; */
-}
-.about .about-box p span{
-  display: inline-block;
-  padding-right: 170px;
-  text-align: justify;
-}
-.palne-img-area {
-  position: absolute;
-  top: -40px;
-  right: -50px;
+  align-items: center;
+  border-radius: 50%;
+  border: 2px solid #007bff;
+  transition: all 0.3s ease-in-out;
 }
 
-.about a:hover {
-  background: #15cfe5;
-  ;
+#about .about-container .icon-box .icon i {
+  color: #007bff;
+  font-size: 24px;
+  line-height: 0;
+}
+
+#about .about-container .icon-box:hover .icon {
+  background: #007bff;
+}
+
+#about .about-container .icon-box:hover .icon i {
+  color: #fff;
+}
+
+#about .about-container .icon-box .title {
+  margin-left: 80px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+#about .about-container .icon-box .title a {
+  color: #283d50;
+}
+
+#about .about-container .icon-box .description {
+  margin-left: 80px;
+  line-height: 24px;
+  font-size: 14px;
+}
+
+#about .about-extra {
+  padding-top: 60px;
+}
+
+#about .about-extra h4 {
+  font-weight: 600;
+  font-size: 24px;
 }
 
 @media (max-width: 768px) {

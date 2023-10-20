@@ -1,26 +1,29 @@
+<!-- ======= About Section ======= -->
+<section id="about">
+      <div class="container" data-aos="fade-up">
 
-   <!-- ======= About Section ======= -->
-   <section id="about" class="about">
-          <div class="container" data-aos="fade-up">
-            <div class="row">
-                <div class="col-md-12 ">
-                  <div class="titlepage">
-                      <h2>Profil</h2>
-                  </div>
-                </div>
-            </div>
+      <div class="titlepage">
+              <h2>Profil</h2>
           </div>
-         <div class="container">
-            <div class="row"> 
-               <div class="col-xl-12 col-lg-12 col-md-12 ">
-                  <div class="about-box">
-                     <p> <span>Pantai Teluk Awur adalah salah satu destinasi wisata yang terkenal di Jepara, Jawa Tengah, Indonesia. 
-                      Pantai ini menawarkan kombinasi indah antara keindahan alam, pantai berpasir putih, dan aktivitas rekreasi yang beragam. lokasinya berada di Desa Awur, Kecamatan Tahunan, Kabupaten Jepara, Jawa Tengah, Indonesia. Letaknya sekitar 13 kilometer dari pusat kota Jepara. Pantai ini memiliki hamparan pasir putih yang luas, air laut yang jernih, dan pemandangan laut yang indah. Saat matahari terbenam, pantai ini menjadi tempat yang populer untuk menikmati pemandangan matahari terbenam yang spektakuler. Pantai Teluk Awur menawarkan berbagai aktivitas rekreasi, seperti berenang, berjemur di pantai, atau bermain voli pantai. Anda juga dapat menyewa perahu untuk menjelajahi perairan sekitar pantai atau mencoba memancing. Di sekitar Pantai Teluk Awur, Anda akan menemukan berbagai warung makan dan penjual makanan pinggir pantai. Anda dapat mencicipi hidangan laut segar, seperti ikan bakar atau seafood lainnya, serta hidangan khas Jepara. Untuk menambah kenyamanan Anda, ada beberapa penginapan dan resort di sekitar Pantai Teluk Awur yang menawarkan berbagai fasilitas dan pilihan menginap.</span></p>
-                     <div class="palne-img-area">
-                        <img  src="assets/img/tiga putri1.png" alt="images">
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-    </section><!-- End About -->
+
+        <div class="row about-container">
+
+          <div class="col-lg-6 content order-lg-1 order-2">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+
+          </div>
+
+          <div class="col-lg-6 background order-lg-2" data-aos="zoom-in">
+            <img src="assets/img/bg.jpg" class="img-fluid" alt="">
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->

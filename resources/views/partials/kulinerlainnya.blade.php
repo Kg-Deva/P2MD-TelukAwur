@@ -17,7 +17,6 @@
   <header id="header" class="d-flex align-items-center">
   <div class="container d-flex align-items-center justify-content-between">
 
-<h1 class="logo"><img src="assets/img/LOGO-BUMDES.png" alt="#" style="width:100%"></h1>
 <h1 class="logo"><img src="assets/img/LOGO-PANTAI.png" alt="#" style="width:100%"></h1>
 
 <nav id="navbar" class="navbar">
@@ -61,7 +60,7 @@
                             <i class="fas fa-tags text-primary me-2"></i><strong>Harga:</strong>&nbsp;{{ formatRupiah($makanan->harga) }}
                             <br>
                             <i class="fas fa-phone-alt text-primary me-2"></i><strong>
-                                Telepon:</strong>&nbsp;<a class="link-opacity-10" href="{{ $makanan->whatsapp }}">Link whatsapp</a>
+                                Telepon:</strong>&nbsp;<a class="link-opacity-10" href="{{ $makanan->whatsapp }}"target="_self">Link whatsapp</a>
                         </p>
                     </div><!-- Menu Item -->
                 @endforeach

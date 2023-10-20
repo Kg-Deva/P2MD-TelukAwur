@@ -21,7 +21,7 @@
                                 <h3 class="mb-0">{{ formatRupiah($tempat->harga) }}</h3>
                                 <div class="mb-3">
                                 <i class="fas fa-map-marked-alt text-primary me-2"></i><strong>
-                                Lokasi:</strong>&nbsp;<a class="link-opacity-10" href="{{ $tempat->gmaps }}">lokasi penginapan</a>
+                                Lokasi:</strong>&nbsp;<a class="link-opacity-10" href="{{ $tempat->gmaps }}" target="_self">lokasi penginapan</a>
                                 </div>
                                 <p>{{ $tempat->deskripsi }}</p>
                             </div>

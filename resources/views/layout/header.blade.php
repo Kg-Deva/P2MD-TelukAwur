@@ -1,6 +1,5 @@
 <div class="container d-flex align-items-center justify-content-between">
 
-      <a class="logo"><img src="assets/img/LOGO-BUMDES.png" alt="#" style="width:100%"></a>
       <a class="logo"><img src="assets/img/LOGO-PANTAI.png" alt="#" style="width:100%"></a>
 
       <nav id="navbar" class="navbar">

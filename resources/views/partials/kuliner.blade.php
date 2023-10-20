@@ -20,7 +20,7 @@
                             <i class="fas fa-tags text-primary me-2"></i><strong>Harga:</strong>&nbsp;{{ formatRupiah($makanan->harga) }}
                             <br>
                             <i class="fas fa-phone-alt text-primary me-2"></i><strong>
-                                Telepon:</strong>&nbsp;<a class="link-opacity-10" href="{{ $makanan->whatsapp }}">Link whatsapp</a>
+                                Telepon:</strong>&nbsp;<a class="link-opacity-10" href="{{ $makanan->whatsapp }}"target="_self">Link whatsapp</a>
                         </p>
                     </div><!-- Menu Item -->
                 @endforeach

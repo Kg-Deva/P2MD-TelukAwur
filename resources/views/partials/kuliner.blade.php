@@ -12,22 +12,28 @@
                         <a class="glightbox"><img src="{{ 'storage/' . $makanan->gambar }}" class="menu-img img-fluid"
                                 alt="" style="width:100%;height:260px"></a>
                         <h4>{{ $makanan->nama_kuliner }}</h4>
-                        <p>{{ $makanan->deskripsi }}</p>
+                        <p>{!! $makanan->deskripsi !!}</p>
                         <p class="ingredients">
                             <i class="fas fa-store text-primary me-2"></i><strong>Nama
                                 Warung:</strong>&nbsp;{{ $makanan->nama_warung }}
                             <br>
-                            <i class="fas fa-tags text-primary me-2"></i><strong>Harga:</strong>&nbsp;{{ formatRupiah($makanan->harga) }}
+                            <i
+                                class="fas fa-tags text-primary me-2"></i><strong>Harga:</strong>&nbsp;{{ formatRupiah($makanan->harga) }}
                             <br>
                             <i class="fas fa-phone-alt text-primary me-2"></i><strong>
+<<<<<<< HEAD
                                 Telepon:</strong>&nbsp;<a class="link-opacity-10" href="{{ $makanan->whatsapp }}"target="_self">Link whatsapp</a>
+=======
+                                Telepon:</strong>&nbsp;<a class="link-opacity-10" href="{{ $makanan->whatsapp }}">Link
+                                whatsapp</a>
+>>>>>>> 923787e25e429cd2e78b7ca8ee9198082a7d82f7
                         </p>
                     </div><!-- Menu Item -->
                 @endforeach
 
             </div>
             <div class="titlepage">
-            <a class="btn btn-primary" href="/kulinerlain" role="button">Lihat lainnya</a>
+                <a class="btn btn-primary" href="/kulinerlain" role="button">Lihat lainnya</a>
             </div>
         </div>
         </div>

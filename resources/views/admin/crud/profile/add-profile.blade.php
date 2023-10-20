@@ -5,7 +5,6 @@
 
         <head>
             <title>Add Profile</title>
-
             @include('admin.layouts.head')
         </head>
 
@@ -37,10 +36,10 @@
                                                     {{ csrf_field() }}
 
                                                     <div class="card-body demo-vertical-spacing demo-only-element">
-
                                                         <div>
                                                             <label for="basicInput">Deskripsi</label>
-                                                            <textarea class="form-control" aria-label="With textarea" placeholder="Deskripsi" name="deskripsi" type="text"></textarea>
+                                                            <textarea class="form-control" aria-label="With textarea" placeholder="Deskripsi" name="deskripsi" type="text"
+                                                                id="deskripsi"></textarea>
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="basicInput">Gambar</label>
@@ -71,6 +70,7 @@
 
                         <!-- Footer -->
                         @include('admin.layouts.footer')
+
                         <!-- / Footer -->
 
         </body>

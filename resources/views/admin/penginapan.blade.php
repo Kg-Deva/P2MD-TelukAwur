@@ -55,12 +55,18 @@
                                             $no = 1;
                                         @endphp
                                         @foreach ($data as $d)
+                                            @php
+                                                $kalimat = $d['deskripsi'];
+                                                $jumlahkarakter = 30;
+                                                $cetak = substr($kalimat, 0, $jumlahkarakter);
+                                                $hasil = $cetak . '...';
+                                            @endphp
                                             <tbody>
                                                 <tr>
                                                     <td>{{ $no++ }}</td>
                                                     <td>{{ $d['nama_penginapan'] }}</td>
                                                     <td>{{ $d->formatRupiah('harga') }}</td>
-                                                    <td>{{ $d['deskripsi'] }}</td>
+                                                    <td>{!! $hasil !!}</td>
                                                     <td>
                                                         <a href="{{ $d['gmaps'] }}" target="_blank">Links</a>
                                                     </td>

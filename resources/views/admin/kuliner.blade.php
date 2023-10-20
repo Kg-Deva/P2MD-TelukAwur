@@ -56,11 +56,17 @@
                                             $no = 0;
                                         @endphp
                                         @foreach ($data as $d)
+                                            @php
+                                                $kalimat = $d['deskripsi'];
+                                                $jumlahkarakter = 30;
+                                                $cetak = substr($kalimat, 0, $jumlahkarakter);
+                                                $hasil = $cetak . '...';
+                                            @endphp
                                             <tbody>
                                                 <tr>
                                                     <td>{{ $data->firstitem() + $no++ }}</td>
                                                     <td>{{ $d['nama_kuliner'] }}</td>
-                                                    <td>{{ $d['deskripsi'] }}</td>
+                                                    <td>{!! $hasil !!}</td>
                                                     <td>{{ $d['nama_warung'] }}</td>
                                                     <td>{{ $d->formatRupiah('harga') }}</td>
                                                     <td>

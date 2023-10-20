@@ -55,15 +55,6 @@
                                               @php
                                                   $kalimat = $d['deskripsi'];
                                                   $jumlahkarakter = 30;
-                                                  $cetak = substr($kalimat, $jumlahkarakter, 1);
-                                                  if ($cetak != ' ') {
-                                                      while ($cetak != ' ') {
-                                                          $i = 1;
-                                                          $jumlahkarakter = $jumlahkarakter + $i;
-                                                          $kalimat = $d['deskripsi'];
-                                                          $cetak = substr($kalimat, $jumlahkarakter, 1);
-                                                      }
-                                                  }
                                                   $cetak = substr($kalimat, 0, $jumlahkarakter);
                                                   $hasil = $cetak . '...';
                                               @endphp
@@ -71,7 +62,7 @@
                                               <tbody>
                                                   <tr>
                                                       <td>{{ $no++ }}</td>
-                                                      <td>{{ $hasil }}</td>
+                                                      <td>{!! $hasil !!}</td>
                                                       <td><img src="{{ asset('storage/' . $d->gambar) }}" alt=""
                                                               style="width: 100px; height: 50px; "></td>
                                                       <td>

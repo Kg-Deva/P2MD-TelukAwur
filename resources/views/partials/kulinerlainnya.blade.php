@@ -17,12 +17,7 @@
     <header id="header" class="d-flex align-items-center">
         <div class="container d-flex align-items-center justify-content-between">
 
-<<<<<<< HEAD
-<h1 class="logo"><img src="assets/img/LOGO-PANTAI.png" alt="#" style="width:100%"></h1>
-=======
-            <h1 class="logo"><img src="assets/img/LOGO-BUMDES.png" alt="#" style="width:100%"></h1>
             <h1 class="logo"><img src="assets/img/LOGO-PANTAI.png" alt="#" style="width:100%"></h1>
->>>>>>> 923787e25e429cd2e78b7ca8ee9198082a7d82f7
 
             <nav id="navbar" class="navbar">
                 <ul>
@@ -52,26 +47,6 @@
                     <h2>Kuliner</h2>
                 </div>
 
-<<<<<<< HEAD
-            <div class="row gy-5">
-                @foreach ($kuliner as $makanan)
-                    <div class="col-lg-4 menu">
-                        <a class="glightbox"><img src="{{ 'storage/' . $makanan->gambar }}" class="menu-img img-fluid"
-                                alt="" style="width:100%;height:260px"></a>
-                        <h4>{{ $makanan->nama_kuliner }}</h4>
-                        <p>{{ $makanan->deskripsi }}</p>
-                        <p class="ingredients">
-                            <i class="fas fa-store text-primary me-2"></i><strong>Nama
-                                Warung:</strong>&nbsp;{{ $makanan->nama_warung }}
-                            <br>
-                            <i class="fas fa-tags text-primary me-2"></i><strong>Harga:</strong>&nbsp;{{ formatRupiah($makanan->harga) }}
-                            <br>
-                            <i class="fas fa-phone-alt text-primary me-2"></i><strong>
-                                Telepon:</strong>&nbsp;<a class="link-opacity-10" href="{{ $makanan->whatsapp }}"target="_self">Link whatsapp</a>
-                        </p>
-                    </div><!-- Menu Item -->
-                @endforeach
-=======
                 <div class="row gy-5">
                     @foreach ($kuliner as $makanan)
                         <div class="col-lg-4 menu">
@@ -88,7 +63,7 @@
                                 <br>
                                 <i class="fas fa-phone-alt text-primary me-2"></i><strong>
                                     Telepon:</strong>&nbsp;<a class="link-opacity-10"
-                                    href="{{ $makanan->whatsapp }}">Link whatsapp</a>
+                                    href="{{ $makanan->whatsapp }}"target="_self">Link whatsapp</a>
                             </p>
                         </div><!-- Menu Item -->
                     @endforeach
@@ -98,7 +73,6 @@
                 <div class="titlepage">
                     <a class="btn btn-primary" href="/" role="button">Kembali</a>
                 </div>
->>>>>>> 923787e25e429cd2e78b7ca8ee9198082a7d82f7
 
             </div>
             </div>

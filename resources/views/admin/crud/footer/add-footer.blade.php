@@ -4,7 +4,7 @@
     data-assets-path="../assets/" data-template="vertical-menu-template-free">
 
 <head>
-    <title>Add Footer</title>
+    <title>Add Branding</title>
 
     @include('admin.layouts.head')
 </head>
@@ -30,7 +30,7 @@
 
                             <div class="col-md-6">
                                 <div class="card mb-4">
-                                    <h5 class="card-header">Add Footer</h5>
+                                    <h5 class="card-header">Add Branding</h5>
                                     <div class="card-body">
                                         <form class="mb-3" action="{{ route('simpan-footer') }}" method="POST"
                                             enctype="multipart/form-data">
@@ -38,21 +38,16 @@
 
                                             <div class="card-body demo-vertical-spacing demo-only-element">
                                                 <div>
-                                                    <label for="basicInput">Lokasi</label>
+                                                    <label for="basicInput">Judul</label>
                                                     <input class="form-control" aria-label="With textarea"
-                                                        placeholder="Lokasi" name="lokasi" type="text">
+                                                        placeholder="Judul" name="judul" type="text">
                                                 </div>
                                                 <div>
-                                                    <label for="basicInput">Email</label>
-                                                    <input class="form-control" aria-label="With textarea"
-                                                        placeholder="Email" name="email" type="text">
-                                                </div>
-                                                <div>
-                                                    <label for="basicInput">Telepon</label>
-                                                    <input class="form-control @error('telepon') is-invalid @enderror"
-                                                        type="text" id="telepon" name="telepon"
-                                                        placeholder="Telepon">
-                                                    @error('telepon')
+                                                    <label for="basicInput">Youtube</label>
+                                                    <input class="form-control @error('youtube') is-invalid @enderror"
+                                                        type="text" id="youtube" name="youtube"
+                                                        placeholder="Link Youtube">
+                                                    @error('youtube')
                                                         <div class="invalid-feedback">
                                                             {{ $message }}
                                                         </div>

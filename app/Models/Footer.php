@@ -13,9 +13,9 @@ class Footer extends Model
     protected $fillable = [
        
         'id' ,
-        'lokasi',
-        'email' ,
-        'telepon' ,
+        'judul',
+        'youtube' ,
+       
     
     ];
     protected $hidden;

@@ -110,12 +110,12 @@
                     </a>
                 </li>
 
-                {{-- <li class="menu-item">
+                <li class="menu-item">
                     <a href="/footer" class="menu-link">
                         <i class="menu-icon tf-icons bi bi-thunderbolt"></i>
-                        <div data-i18n="Analytics">Footer</div>
+                        <div data-i18n="Analytics">Branding</div>
                     </a>
-                </li> --}}
+                </li>
 
 
                 @if (auth()->user()->level == 'admin')

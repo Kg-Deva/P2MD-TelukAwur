@@ -13,9 +13,8 @@ return new class extends Migration
     {
         Schema::create('footer', function (Blueprint $table) {
             $table->id();
-            $table->string('lokasi');
-            $table->string('email');
-            $table->string('telepon');
+            $table->string('judul');
+            $table->string('youtube');
             $table->timestamps();
         });
     }

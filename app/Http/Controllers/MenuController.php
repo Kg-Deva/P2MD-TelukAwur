@@ -484,7 +484,7 @@ class MenuController extends Controller
 
 /* 
 |--------------------------------------------------------------------------
-|  Footer
+|  Footer->Branding
 |--------------------------------------------------------------------------
 */
 
@@ -507,9 +507,8 @@ class MenuController extends Controller
         // dd($request->all());
 
         $validateData = $request->validate([
-            'lokasi' => 'required',
-            'email' => 'required|email:dns',
-            'telepon' => 'required',
+            'judul' => 'required',
+            'youtube' => 'required',
         ]);
 
        Footer::create($validateData);
@@ -527,9 +526,8 @@ return redirect('footer')->with('success', 'Data Berhasil Ditambahkan');
     {
         $data = Footer::find($id);
         $validateData = $request->validate([
-            'lokasi' => 'required',
-            'email' => 'required|email:dns',
-            'telepon' => 'required',
+            'judul' => 'required',
+            'youtube' => 'required',
         ]);
 
         $data->update($validateData);

@@ -4,7 +4,7 @@
     data-assets-path="../assets/" data-template="vertical-menu-template-free">
 
 <head>
-    <title>Edit Footer</title>
+    <title>Edit Branding</title>
 
     @include('admin.layouts.head')
 </head>
@@ -30,7 +30,7 @@
 
                             <div class="col-md-6">
                                 <div class="card mb-4">
-                                    <h5 class="card-header">Edit Footer</h5>
+                                    <h5 class="card-header">Edit Branding</h5>
                                     <div class="card-body">
                                         <form class="mb-3" action="{{ url('update-footer', $data->id) }}"
                                             method="POST" enctype="multipart/form-data">
@@ -38,23 +38,17 @@
 
                                             <div class="card-body demo-vertical-spacing demo-only-element">
                                                 <div>
-                                                    <label for="basicInput">Lokasi</label>
+                                                    <label for="basicInput">Judul</label>
                                                     <input class="form-control" aria-label="With textarea"
-                                                        placeholder="Lokasi" name="lokasi" type="text"
-                                                        value="{{ $data->lokasi }}">
+                                                        placeholder="Lokasi" name="judul" type="text"
+                                                        value="{{ $data->judul }}">
                                                 </div>
                                                 <div>
-                                                    <label for="basicInput">Email</label>
-                                                    <input class="form-control" aria-label="With textarea"
-                                                        placeholder="Email" name="email" type="text"
-                                                        value="{{ $data->email }}">
-                                                </div>
-                                                <div>
-                                                    <label for="basicInput">Telepon</label>
-                                                    <input class="form-control @error('telepon') is-invalid @enderror"
-                                                        type="text" id="telepon" name="telepon"
-                                                        placeholder="Telepon" value="{{ $data->telepon }}">
-                                                    @error('telepon')
+                                                    <label for="basicInput">Youtube</label>
+                                                    <input class="form-control @error('youtube') is-invalid @enderror"
+                                                        type="text" id="youtube" name="youtube"
+                                                        placeholder="Link Youtube" value="{{ $data->youtube }}">
+                                                    @error('youtube')
                                                         <div class="invalid-feedback">
                                                             {{ $message }}
                                                         </div>

@@ -31,7 +31,7 @@
                         <!-- Bordered Table -->
                         <div class="card">
                             <div class="d-flex justify-content-between">
-                                <h5 class="card-header">Footer</h5>
+                                <h5 class="card-header">Branding</h5>
                                 <a class="card-header" href="{{ route('add-footer') }}"><button type="button"
                                         class="btn btn-outline-primary">Tambah</button></a>
                             </div>
@@ -43,9 +43,8 @@
                                         <thead>
                                             <tr>
                                                 <th>No</th>
-                                                <th>Lokasi</th>
-                                                <th>Email</th>
-                                                <th>Telepon</th>
+                                                <th>Judul</th>
+                                                <th>Youtube</th>
                                                 <th>Actions</th>
                                             </tr>
                                         </thead>
@@ -56,9 +55,8 @@
                                             <tbody>
                                                 <tr>
                                                     <td>{{ $no++ }}</td>
-                                                    <td>{{ $d['lokasi'] }}</td>
-                                                    <td>{{ $d['email'] }}</td>
-                                                    <td>{{ $d['telepon'] }}</td>
+                                                    <td>{{ $d['judul'] }}</td>
+                                                    <td>{{ $d['youtube'] }}</td>
                                                     <td>
                                                         <div>
                                                             <a class="dropdown-item"

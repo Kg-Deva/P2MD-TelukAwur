@@ -60,7 +60,9 @@
                                                 <div>
                                                     <label for="basicInput">WhatsApp</label>
                                                     <input class="form-control" aria-label="With textarea"
-                                                        placeholder="WhatsApp" name="whatsapp" type="text">
+                                                        placeholder="WhatsApp" name="whatsapp" type="text"
+                                                        value="https://wa.me/">
+
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="basicInput">Gambar</label>

@@ -28,6 +28,7 @@
     @include('partials.kuliner');
     @include('partials.wisata');
     @include('partials.penginapan');
+    @include('partials.video');
     @include('partials.kontak');
   </main><!-- End #main -->
 

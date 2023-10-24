@@ -6,13 +6,14 @@
         <div class="col-lg-5 col-md-6 footer-links">
             <!-- <h4>Our Social Networks</h4> -->
             <img src="assets/img/LOGO-BUMDES.png" alt=""><img src="assets/img/LOGO-PANTAI.png" alt="">
-            <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
+            <p style="text-align: justify;">Pantai Teluk Awur berada di Desa Awur, Kecamatan Tahunan, Kabupaten Jepara, Jawa Tengah, Indonesia.
+            </p>
             <div class="social-links mt-3">
-              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              <!-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> -->
+              <a href="https://www.facebook.com/profile.php?id=100082078239833&mibextid=ZbWKwL" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="https://instagram.com/telukmakmur_bumdes?igshid=MzRlODBiNWFlZA==" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <!-- <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> -->
             </div>
           </div>
 
@@ -27,17 +28,17 @@
               <li><i class="bx bx-chevron-right"></i> <a href="#penginapan">Penginapan</a></li>
             </ul>
           </div>
-          @foreach ($footer as $d)
+          
 
           <div class="col-lg-3 col-md-6 footer-contact">
             <h4><span>Kontak Hubung</span></h4>
             <p>
-              {{ $d->lokasi }}<br>
-              <strong>Phone:</strong> {{ $d->telepon }}<br>
-              <strong>Email:</strong> {{ $d->email }}<br>
+            Kec. Tahunan, Kab. Jepara, Jawa Tengah<br>
+              <strong>Phone:</strong>+62 813-2656-6592<br>
+              <strong>Email:</strong>bumdestelukmakmur.telukawur@gmail.com<br>
             </p>
           </div>
-          @endforeach
+          
 
         </div>
       </div>

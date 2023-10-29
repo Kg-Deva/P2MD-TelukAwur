@@ -1103,6 +1103,15 @@ text-align: center;
   box-shadow: 0 0 30px rgba(214, 215, 216, 0.4);
   padding: 30px;
 }
+.responsive-iframe {
+  position: relative;
+  top: 0;
+  left: 0;
+  bottom: 10px;
+  right: 0;
+  width: 100%;
+  height: 300px;
+}
 
 .video .php-email-form .error-message {
   display: none;
